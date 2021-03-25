@@ -6,3 +6,4 @@ from rest_framework import viewsets
 class CategoryView(viewsets.ModelViewSet):
     serializer_class = CategorySerializer
     queryset = Category.objects.all()
+    filterset_fields = ['name', 'books']
