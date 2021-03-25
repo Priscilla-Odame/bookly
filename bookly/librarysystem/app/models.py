@@ -13,7 +13,7 @@ class CustomUserManager(BaseUserManager):
     Custom user model manager where email is the unique identifiers
     for authentication instead of usernames.
     """
-    def create_user(self, firstname, lastname, email, username, date_of_birth, password= None):
+    def create_user(self, firstname, lastname, email, date_of_birth, password= None):
         """
         Create and save a User with the given email and password.
         """
@@ -27,13 +27,12 @@ class CustomUserManager(BaseUserManager):
         user = self.model(email=email)
         user.firstname = firstname
         user.lastname = lastname
-        user.username = username
         user.date_of_birth = date_of_birth
         user.set_password(password)
         user.save()
         return user
 
-    def create_superuser(self, firstname, lastname, email, username, date_of_birth, password = None):
+    def create_superuser(self, firstname, lastname, email, date_of_birth, password = None):
         """
         Create and save a SuperUser with the given email and password.
         """
@@ -51,7 +50,6 @@ class CustomUserManager(BaseUserManager):
                 email=self.normalize_email(email),
                 firstname=firstname,
                 lastname=lastname,
-                username = username,
                 date_of_birth = date_of_birth
             )
         user.set_password(password)
@@ -63,7 +61,7 @@ class CustomUserManager(BaseUserManager):
         return user
 
 
-    def create_staffuser(self, email, firstname, lastname,username, date_of_birth, password=None):
+    def create_staffuser(self, email, firstname, lastname, date_of_birth, password=None):
 
         if not email:
             raise ValueError("User must have an email")
@@ -74,19 +72,17 @@ class CustomUserManager(BaseUserManager):
         if not lastname:
             raise ValueError("User must have a last name")
         if not date_of_birth:
-            raise TypeError("Users must have a date of birth")
+            raise TypeError("User must have a date of birth")
 
         user = self.create_user(
             email=self.normalize_email(email),
             firstname=firstname,
             lastname=lastname,
-            username = username,
             date_of_birth=date_of_birth
         )
         user.set_password(password)
         user.firstname = firstname
         user.lastname = lastname
-        user.username = username
         user.date_of_birth = date_of_birth
         user.is_admin = False
         user.is_staff = True
@@ -99,7 +95,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     lastname = models.CharField(max_length = 100)
     email = models.EmailField(_('email address'), unique = True)
     password = models.CharField(max_length = 100)
-    username = models.CharField(max_length = 100)
     date_of_birth = models.DateField(default=date.today)
     is_admin = models.BooleanField(default = False)
     is_active = models.BooleanField(default = False)
@@ -108,7 +103,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     date_joined = models.DateTimeField(default=timezone.now)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['firstname','lastname','username','date_of_birth']
+    REQUIRED_FIELDS = ['firstname','lastname','date_of_birth']
 
     objects = CustomUserManager()
 

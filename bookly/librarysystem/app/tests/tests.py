@@ -11,14 +11,12 @@ class TestUserModel(TestCase):
             firstname='kwasi',
             lastname='asamoah'
             email='kwasi@example.com',
-            username='Kwasi',
             date_of_birth='04-02-2003'
         )
         User.objects.create(
             firstname='jennifer',
             lastname='asamoah'
             email='jennifer@example.com',
-            username='jenny',
             date_of_birth='05-02-2003'
 
     def test_user_created(self):
@@ -32,7 +30,6 @@ class TestUserModel(TestCase):
             firstname='priscilla',
             lastname='',
             email='priscilla@example.com',
-            username='Prissy',
             date_of_birth='05-02-2003',
             password="password"
         )
@@ -44,7 +41,6 @@ class TestUserModel(TestCase):
             'firstname': 'kojo',
             'email': email,
             'lastname': 'amoh',
-            'username': 'Kojo',
             'date_of_birth': '05-02-2003',
             'password': 'password'
             }
@@ -56,7 +52,6 @@ class TestUserModel(TestCase):
         user = User(
             email='kojo@example.com',
             lastname='amoh',
-            username='Kojo',
             date_of_birth='05-02-2003',
             password='password',
         )
@@ -67,7 +62,6 @@ class TestUserModel(TestCase):
             firstname="kofi",
             email="kofi@example.com",
             lastname="amoh",
-            username='Kofi',
             date_of_birth='05-02-2003',
             password="password"
         )
