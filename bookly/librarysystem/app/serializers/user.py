@@ -3,6 +3,7 @@ from app.models import User
 from rest_framework.exceptions import AuthenticationFailed
 from app.utils import token_generator
 from django.contrib.auth import authenticate, get_user_model
+from datetime import date
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -33,8 +34,15 @@ class SignUpSerializer(serializers.ModelSerializer):
     #     user.save()
     #     return attrs
 
-class LogInSerializer(serializers.ModelSerializer):
-    #email = serializers.EmailField(max_length=225)
+class LogInSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    password = serializers.CharField(style = {'input_type': 'password'}, write_only = True)
+    firstname = serializers.CharField(read_only= True, max_length=100)
+    lastname = serializers.CharField(read_only= True, max_length=100)
+    date_of_birth = serializers.DateField(default=date.today)
+    access_token = serializers.ReadOnlyField(source='user_access_token')
+    refresh_token = serializers.ReadOnlyField(source='user_refresh_token')
+    
 
     class Meta:
         model = User
@@ -62,5 +70,7 @@ class LogInSerializer(serializers.ModelSerializer):
             'firstname': user.firstname,
             'email': user.email,
             'lastname': user.lastname,
-            'tokens': user.tokens
+            'date_of_birth': user.date_of_birth,
+            'user_access_token': user.get_access_token,
+            'user_refresh_token': user.get_refresh_token        
         }
