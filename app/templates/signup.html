@@ -3,14 +3,15 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Login</title>
+        <title>Sign Up</title>
         {% load static %}  
         <link rel="stylesheet" href="{% static 'css/signup.css' %}">
         <script src="login.js"></script>
     </head>
 
     <body><br><br><br><br>
-        <form action="" method="post">
+        <form action="" method="post" autocomplete="on">
+        {% csrf_token %}
             <div class="imgcontainer">
             </div>
 

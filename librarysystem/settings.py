@@ -169,6 +169,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+LOGIN_REDIRECT_URL = 'home'
 STATIC_URL = '/static/'
 MEDIA_URL = 'uploads/'
 django_heroku.settings(locals())
