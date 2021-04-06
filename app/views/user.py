@@ -32,6 +32,9 @@ class LoginView(viewsets.ModelViewSet):
         serializer.is_valid(raise_exception=True)
         return render(request,'user.html',serializer.data)
 
+def register(request):
+    return render(request,'signup.html')
+
 def logins(request):
         # serializer = LogInSerializer(data=request.data)
         # serializer.is_valid(raise_exception=True)

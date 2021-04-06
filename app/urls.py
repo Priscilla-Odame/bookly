@@ -5,7 +5,7 @@ from app.views.books import BookViews
 from app.views.category import CategoryView
 from app.views.borrow import OrderBookViewSet
 from rest_framework import routers
-from app.views.user import logins
+from app.views.user import logins, register
 
 router = routers.DefaultRouter()
 
@@ -19,5 +19,6 @@ router.register(r'borrow',OrderBookViewSet,'borrow')
 urlpatterns = [
     path('', include(router.urls)),
     url(r'^logins/', logins, name='logins'),
+    url(r'^register/', register, name='register'),
     # path('api/login', LoginAPI.as_view(), name ='login')
 ]

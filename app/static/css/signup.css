@@ -1,0 +1,21 @@
+body  {
+    margin:auto;
+    width: 50%;
+    background-image: url("../image/image.png");
+}
+
+form {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    background-color: plum;
+    color: purple;
+}
+button {
+    color: pink;
+    background-color: blueviolet;
+}
+input {
+    color: plum;
+}
