@@ -14,6 +14,7 @@ from pathlib import Path
 from datetime import timedelta
 import os
 import environ
+import django_heroku
 from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -170,3 +171,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = 'uploads/'
+django_heroku.settings(locals())
