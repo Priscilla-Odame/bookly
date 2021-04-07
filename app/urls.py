@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from django.urls import path, include
 from app.views.user import SignUpAPI, LoginView
-from app.views.books import BookViews
+from app.views.books import BookViews, books
 from app.views.category import CategoryView
 from app.views.borrow import OrderBookViewSet
 from rest_framework import routers
@@ -20,5 +20,6 @@ urlpatterns = [
     path('', include(router.urls)),
     url(r'^logins/', logins, name='logins'),
     url(r'^register/', register, name='register'),
+    url(r'^bookss/', books, name='bookss'),
     # path('api/login', LoginAPI.as_view(), name ='login')
 ]
