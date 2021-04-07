@@ -32,7 +32,8 @@ class LoginView(viewsets.ModelViewSet):
     def post(self, request):
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
-        return render(request,'login.html',serializer.data)
+        return Response(serializer.data)
+        # return render(request,'login.html',serializer.data)
 
 def register(request):
     # if request.method == 'POST':
