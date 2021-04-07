@@ -17,7 +17,7 @@ router.register(r'borrow',OrderBookViewSet,'borrow')
 # urlpatterns = router.urls
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('api/', include(router.urls)),
     url(r'^logins/', logins, name='logins'),
     url(r'^register/', register, name='register'),
     url(r'^bookss/', books, name='bookss'),
