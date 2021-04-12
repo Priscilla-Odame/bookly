@@ -18,7 +18,7 @@ router.register(r'borrow',OrderBookViewSet,'borrow')
 
 urlpatterns = [
     path('api/', include(router.urls)),
-    url(r'^logins/', logins, name='logins'),
+    url(r'^login/', logins, name='logins'),
     url(r'^register/', register, name='register'),
     url(r'^bookss/', books, name='bookss'),
     # path('api/login', LoginAPI.as_view(), name ='login')

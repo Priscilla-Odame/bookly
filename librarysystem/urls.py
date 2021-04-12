@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
+from app.views.books import books
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url('^$', books),
     path('api-auth/', include('rest_framework.urls')),
     path('', include('app.urls')),
 ]

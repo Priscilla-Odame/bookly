@@ -12,7 +12,7 @@ class BookViews(viewsets.ModelViewSet):
     filterset_fields = ['title', 'author']
 
 def books(request):
-    all_books = Book.objects.all()
-    filterset_fields = ['title','author']
-    args = {'all_books': all_books}
-    return render(request,'books.html',args)
+    # all_books = Book.objects.all()
+    # filterset_fields = ['title','author']
+    # args = {'all_books': all_books}
+    return render(request,'books.html')
