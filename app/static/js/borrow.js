@@ -1,13 +1,16 @@
 function handleBorrow() {
     // console.log("We are about to submit the form");
-    let dateBorrowedVal = document.getElementById('email').value;
-    let passwordVal = document.querySelector('#password').value;
+    // let dateBorrowedVal = document.getElementById('dateborrowed').value;
+    // let dateReturnedVal = document.getElementById('datereturned').value;
+    let bookBorrowedVal = document.getElementById('book').value
 
-    let data = {email: emailVal, password: passwordVal };
+    // let data = {date_borrowed: dateBorrowedVal, return_date: dateReturnedVal, book : bookBorrowedVal };
+    let data = {book : bookBorrowedVal };
+
     console.log('We are submitting this data to the backend in the right one', data);
 
 
-    fetch('https://librariesapp.herokuapp.com/api/login/', {
+    fetch('https://librariesapp.herokuapp.com/api/borrow/', {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
