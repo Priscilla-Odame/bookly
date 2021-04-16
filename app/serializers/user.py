@@ -35,6 +35,7 @@ class SignUpSerializer(serializers.ModelSerializer):
     #     return attrs
 
 class LogInSerializer(serializers.Serializer):
+    id = serializers.IntegerField(read_only=True)
     email = serializers.EmailField()
     password = serializers.CharField(style = {'input_type': 'password'}, write_only = True)
     firstname = serializers.CharField(read_only= True, max_length=100)
@@ -66,6 +67,7 @@ class LogInSerializer(serializers.Serializer):
             raise AuthenticationFailed('Invalid Credential. Try again')
 
         return {
+            'id':user.id,
             'firstname': user.firstname,
             'email': user.email,
             'lastname': user.lastname,

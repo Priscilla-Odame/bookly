@@ -5,6 +5,7 @@ from rest_framework import generics,status, permissions
 from app.serializers.user import SignUpSerializer, LogInSerializer
 from rest_framework.response import Response
 from django.contrib.auth import authenticate
+from django.http import HttpResponse
 
 
 # Create your views here.
@@ -34,22 +35,10 @@ class LoginView(viewsets.ModelViewSet):
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
-        # return render(request,'login.html',serializer.data)
 
 def register(request):
-    # if request.method == 'POST':
-    #     data = request.POST['firstname','lastname','email','date_of_birth','password']
-    #     if data.is_valid():
-    #         data.save()
-    #         email = data.get('email')
-    #         password = data.get('password')
-    #         user = authenticate(email=email, password=raw_password)
-    #         login(request, user)
-    #         return redirect('home')
     return render(request,'signup.html')
 
 def logins(request):
-        # if request.method == 'POST':
-        #     data = request.POST['email','password']
         return render(request,'login.html')
 

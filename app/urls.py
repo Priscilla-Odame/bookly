@@ -3,7 +3,7 @@ from django.urls import path, include
 from app.views.user import SignUpAPI, LoginView
 from app.views.books import BookViews, books
 from app.views.category import CategoryView
-from app.views.borrow import OrderBookViewSet
+from app.views.borrow import OrderBookViewSet, dashboard
 from rest_framework import routers
 from app.views.user import logins, register
 
@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^login/', logins, name='logins'),
     url(r'^register/', register, name='register'),
     url(r'^bookss/', books, name='bookss'),
+    url(r'^dashboard/', dashboard, name='dashboard'),
     # path('api/login', LoginAPI.as_view(), name ='login')
 ]
