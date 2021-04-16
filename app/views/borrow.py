@@ -8,6 +8,9 @@ class OrderBookViewSet(viewsets.ModelViewSet):
     serializer_class = OrderBookSerializer
     queryset = OrderBook.objects.all()
 
+def borrow(request):
+    return render(request,'borrow.html')
+    
 def dashboard(request):
     return render(request,'dashboard.html')
 
