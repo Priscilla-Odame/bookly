@@ -6,6 +6,9 @@ from app.views.category import CategoryView
 from app.views.borrow import OrderBookViewSet, dashboard
 from rest_framework import routers
 from app.views.user import logins, register
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 router = routers.DefaultRouter()
 
@@ -23,4 +26,4 @@ urlpatterns = [
     url(r'^bookss/', books, name='bookss'),
     url(r'^dashboard/', dashboard, name='dashboard'),
     # path('api/login', LoginAPI.as_view(), name ='login')
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
