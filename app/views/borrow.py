@@ -10,8 +10,10 @@ class OrderBookViewSet(viewsets.ModelViewSet):
 
 def borrow(request):
     return render(request,'borrow.html')
-    
+
 def dashboard(request):
     return render(request,'dashboard.html')
 
+def admindashboard(request):
+    return render(request,'admin.html')
     

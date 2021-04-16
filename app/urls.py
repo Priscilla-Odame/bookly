@@ -3,7 +3,7 @@ from django.urls import path, include
 from app.views.user import SignUpAPI, LoginView
 from app.views.books import BookViews, books
 from app.views.category import CategoryView
-from app.views.borrow import OrderBookViewSet, dashboard, borrow
+from app.views.borrow import OrderBookViewSet, dashboard, borrow, admindashboard
 from rest_framework import routers
 from app.views.user import login, register
 from django.conf import settings
@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^register/', register, name='register'),
     url(r'^books/', books, name='allbooks'),
     url(r'^dashboard/', dashboard, name='dashboard'),
+    url(r'^admindash/', admindashboard, name='admin-dashboard'),
     url(r'^borrow/', borrow, name='borrow-book'),
     # path('api/login', LoginAPI.as_view(), name ='login')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
