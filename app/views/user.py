@@ -39,6 +39,6 @@ class LoginView(viewsets.ModelViewSet):
 def register(request):
     return render(request,'signup.html')
 
-def logins(request):
+def login(request):
         return render(request,'login.html')
 
