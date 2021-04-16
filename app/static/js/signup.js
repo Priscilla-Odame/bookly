@@ -8,7 +8,7 @@ function handleSignup() {
     
     let data = {firstname: firstnameVal ,lastname: lastnameVal ,email: emailVal,date_of_birth: dobVal, password: passwordVal };
     console.log('We are submitting this data to the backend in the right one', data);
-
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
     fetch('http://127.0.0.1:8000/api/signup/', {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -16,7 +16,8 @@ function handleSignup() {
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
         credentials: 'same-origin', // include, *same-origin, omit
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'X-CSRFToken': csrftoken,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         redirect: 'follow', // manual, *follow, error

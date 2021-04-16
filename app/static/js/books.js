@@ -25,12 +25,12 @@ function populateBooks(data) {
 
     // create a table 
     let booksTable = document.createElement('table');
-    booksTable.setAttribute('border', "1");
+    // booksTable.setAttribute('border', "1");
 
     // create a table row for heading
     let headingRow = document.createElement('tr');
 
-    headingRow.innerHTML = "<th>Id</th><th>Title</th><th>Author</th><th>No. of Pages</th><th>No. of Copies</th><th>Action</th>";
+    headingRow.innerHTML = "<th>Book Cover</th><th>Title</th><th>Author</th><th>No. of Pages</th><th>No. of Copies</th><th>Action</th>";
 
     // now append the heading row to the table
     booksTable.appendChild(headingRow);
@@ -46,13 +46,15 @@ function populateBooks(data) {
         // now create a row and then put the book details in the 
         // corresponding tds
         let dataRow = document.createElement('tr');
+        let imageValue = `<img src="${book.book_cover}" alt="book cover for ${book.title}"/>`
 
-        dataRow.innerHTML = `<td>${book.id}</td><td>${book.title}</td><td>${book.author}</td><td>${book.number_of_pages}</td><td>${book.number_of_books}</td>`;
+        dataRow.innerHTML = `<td>${imageValue}</td><td>${book.title}</td><td>${book.author}</td><td>${book.number_of_pages}</td><td>${book.number_of_books}</td>`;
 
         const btnBorrow = document.createElement('button');
         btnBorrow.innerHTML = "Borrow";
         btnBorrow.onclick = (()=> {
             console.log('Are you seriously trying to borrow book with id ', book.title);
+            window.location.href = "/borrow"
         });
 
         dataRow.appendChild(btnBorrow);
@@ -69,5 +71,5 @@ function populateBooks(data) {
 function borrowBook(book) {
     alert('You want to borrow this book with an id of ', book.id)
 
-    fetch('ureier', k)
+    fetch('https://librariesapp.herokuapp.com/borrow', k)
 }
