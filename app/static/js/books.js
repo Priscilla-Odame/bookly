@@ -50,7 +50,7 @@ function populateBooks(data) {
         dataRow.innerHTML = `<td>${book.id}</td><td>${book.title}</td><td>${book.author}</td><td>${book.number_of_pages}</td><td>${book.number_of_books}</td>`;
 
         const btnBorrow = document.createElement('button');
-        btnBorrow.innerHTML = "Burrow";
+        btnBorrow.innerHTML = "Borrow";
         btnBorrow.onclick = (()=> {
             console.log('Are you seriously trying to borrow book with id ', book.title);
         });
