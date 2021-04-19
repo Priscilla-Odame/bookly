@@ -16,7 +16,7 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'description', 'books')
 
 class OrderBookAdmin(admin.ModelAdmin):
-    list_display = ('id', 'book', 'borrowed_by','date_borrowed','return_date')
+    list_display = ('id', 'book', 'borrowed_by','date_borrowed','duration','return_date')
 
 admin.site.register(User, UserAdmin)
 admin.site.register(Book, BookAdmin)

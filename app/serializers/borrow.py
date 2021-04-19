@@ -3,7 +3,6 @@ from app.submodels.borrow import OrderBook
 
 
 class OrderBookSerializer(serializers.ModelSerializer):
-
     def to_representation(self, instance):
         ret = super().to_representation(instance)
         ret['book'] = '%s' %(instance.book.title)
@@ -16,4 +15,4 @@ class OrderBookSerializer(serializers.ModelSerializer):
     class Meta:
         model = OrderBook
         fields = '__all__'
-        read_only_fields = ('date_borrowed','borrowed_by')
+        read_only_fields = ('date_borrowed','borrowed_by','return_date')

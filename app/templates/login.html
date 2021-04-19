@@ -12,9 +12,6 @@
     <body><br><br><br><br>
         <form >
         {% csrf_token %}
-            <div class="imgcontainer">
-            </div>
-
             <div class="container">
                 <label for="email"><b>Email:</b></label><br>
                 <input type="email" placeholder="Enter Email" name="email"  id ="email" required>
@@ -24,7 +21,7 @@
                 <input type="password" placeholder="Enter Password" name="psw" id = "password" required>
                 <br><br>
 
-                <button type="button" onclick="handleLogin()"><a href="https://librariesapp.herokuapp.com/dashboard/">Login</a></button><br><br>
+                <button type="button" onclick="handleLogin()">Login</button><br><br>
                 <label>
                 <input type="checkbox" checked="checked" name="remember"  id ="remember"> Remember me
                 </label><br><br>
