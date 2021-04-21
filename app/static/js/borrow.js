@@ -1,11 +1,19 @@
+function handleFill() {
+  let bookTitle = localStorage.getItem('selectedBook')
+  document.getElementById('book').value = bookTitle
+  console.log("We're about to fill the page")
+}
+
+
 function handleBorrow() {
     // console.log("We are about to submit the form");
     // let dateBorrowedVal = document.getElementById('dateborrowed').value;
     // let dateReturnedVal = document.getElementById('datereturned').value;
-    let bookBorrowedVal = document.getElementById('book').value
+    let bookBorrowedVal = document.getElementById('book').value 
+    let durationVal = document.getElementById('duration').value
 
     // let data = {date_borrowed: dateBorrowedVal, return_date: dateReturnedVal, book : bookBorrowedVal };
-    let data = {book : bookBorrowedVal };
+    let data = {book : bookBorrowedVal , duration : durationVal};
 
     console.log('We are submitting this data to the backend in the right one', data);
 
@@ -45,4 +53,18 @@ function handleBorrow() {
     //   .catch((error) => {
     //     console.error('Error:', error);
     //   });
+
+  // function autoFill() {
+  //   document.getElementById('input1').value = "My Text Input";
+  //   document.getElementById('input2').value = "Dropdown2";
+ 
+  //   var radioElements = document.getElementsByName("input3");
+
+  //   for (var i=0; i<radioElements.length; i++) {
+  //     if (radioElements[i].getAttribute('value') == 'Radio3') {
+  //       radioElements[i].checked = true;
+  //     }
+  //   }
+  // }
 }
+

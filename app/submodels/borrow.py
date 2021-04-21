@@ -16,7 +16,14 @@ class OrderBook(models.Model):
     return_date = models.DateTimeField(default=datetime.today() + timedelta(days=3))
 
 
+    # def get_deadline(self):
+    #     borrow_date = datetime.strptime(date_borrowed, "FORMAT")
+    #     return_date = borrow_date + timedelta(days=duration)
+    #     return_by = return_date.strftime(return_date, days)
+
     def get_deadline(self):
-        borrow_date = datetime.strptime(date_borrowed, "FORMAT")
-        return_date = borrow_date + timedelta(days=duration)
-        return_by = return_date.strftime(return_date, days)
+        attname = 'duration'.format() # get the attribute name
+        value = getattr(self, attname) # get the value
+        return_date = borrow_date + timedelta(days=value)
+        return str(return_date)
+    user_deadline = property(get_deadline)

@@ -9,24 +9,22 @@
         <script src="{% static 'js/borrow.js' %}"></script>
     </head>
 
-    <body><br><br><br><br>
+    <body onload="handleFill()"><br><br><br><br>
         <form >
         {% csrf_token %}
             <div class="imgcontainer">
             </div>
 
             <div class="container">
-                <!--label for="dateborrowed"><b>Date Borrowed:</b></label><br>
-                <input type="date" placeholder="" name="dateborrowed"  id ="dateborrowed" required>
-                <br><br>
-
-                <label for="datereturned" ><b>Date Returned:</b></label><br>
-                <input type="date" placeholder="" name="datereturned" id = "datereturned" required-->
                 <br><br>
 
                 
                 <label for="book" ><b>Book:</b></label><br>
                 <input type="text" placeholder="" name="book" id = "book" required>
+                <br><br>
+
+                <label for ="duration"><b>Duration:</b></label><br>
+                <input type="number" placeholder="" name="duration" id="duration" required>
                 <br><br>
 
                 <button type="button" onclick="handleBorrow()">Borrow</button><br><br>

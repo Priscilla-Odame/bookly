@@ -53,7 +53,8 @@ function populateBooks(data) {
         const btnBorrow = document.createElement('button');
         btnBorrow.innerHTML = "Borrow";
         btnBorrow.onclick = (()=> {
-            console.log('Are you seriously trying to borrow book with id ', book.title);
+            console.log('Are you seriously trying to borrow book with title ', book.title);
+            localStorage.setItem('selectedBook', book.title)
             window.location.href = "/borrow"
         });
 
@@ -70,6 +71,7 @@ function populateBooks(data) {
 // write a function to make a request to borrow the book
 function borrowBook(book) {
     alert('You want to borrow this book with an id of ', book.id)
+    let bookBorrowedVal = document.getElementById('book').value = book.title
 
-    fetch('https://librariesapp.herokuapp.com/borrow', k)
+    // fetch('https://librariesapp.herokuapp.com/borrow', k)
 }
