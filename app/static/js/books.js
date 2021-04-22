@@ -47,8 +47,9 @@ function populateBooks(data) {
         // corresponding tds
         let dataRow = document.createElement('tr');
         let imageValue = `<img src="${book.book_cover}" alt="book cover for ${book.title}"/>`
+        let thumbnail = `<a target="_top" href="${book.book_cover}">${imageValue}</a>`
 
-        dataRow.innerHTML = `<td>${imageValue}</td><td>${book.title}</td><td>${book.author}</td><td>${book.number_of_pages}</td><td>${book.number_of_books}</td>`;
+        dataRow.innerHTML = `<td>${thumbnail}</td><td>${book.title}</td><td>${book.author}</td><td>${book.number_of_pages}</td><td>${book.number_of_books}</td>`;
 
         const btnBorrow = document.createElement('button');
         btnBorrow.innerHTML = "Borrow";
@@ -68,10 +69,32 @@ function populateBooks(data) {
     sectionBooks.appendChild(booksTable);
 }
 
-// write a function to make a request to borrow the book
-function borrowBook(book) {
-    alert('You want to borrow this book with an id of ', book.id)
-    let bookBorrowedVal = document.getElementById('book').value = book.title
-
-    // fetch('https://librariesapp.herokuapp.com/borrow', k)
-}
+function searchBook() {
+    // Declare variables
+    var input, filter, txtValue;
+    input = document.getElementById('mySearch');
+    filter = input.value.toUpperCase();
+    // ul = document.getElementById("myUL");
+    // li = ul.getElementsByTagName('li');
+  
+    // Loop through all list items, and hide those who don't match the search query
+    // for (i = 0; i < li.length; i++) {
+    //   a = li[i].getElementsByTagName("a")[0];
+    //   txtValue = a.textContent || a.innerText;
+    //   if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    //     li[i].style.display = "";
+    //   } else {
+    //     li[i].style.display = "none";
+    //   }
+    // }
+    for (let i=0; i < data.length; i++) {
+        // get the book object
+        const book = data[i];
+        txtValue = book.textContent || book.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1){
+            data[i].style.display= "";
+        }else {
+            data[i].style.display="none";
+        }
+        }
+  }

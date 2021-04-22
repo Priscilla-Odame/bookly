@@ -24,26 +24,34 @@ function handleSignup() {
         referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
         body: JSON.stringify(data) // body data type must match "Content-Type" header
       })
-      .then(response => response.json())
-      .then(data => {
+      .then(response =>{
+        if (response.status != 201) {
+              console.log('You have a problem');
+              return;
+          } else {
+              let goodData = response.json();
+      goodData.then(data => {
         console.log('Success:', data);
-      })
+        window.location.href = '/dashboard';
+      })}})
       .catch((error) => {
         console.error('Error:', error);
       });
-        //   response => {
-        //   if (response.status != 201) {
-        //       console.log('You have a problem');
-        //       return;
-    //       } else {
-    //           let goodData = response.json();
-    //           goodData.then(() => {
-    //               console.log('Success:', data);
-    //               window.location.href = '/books.html';
-    //           })
-    //       }
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error:', error);
-    //   });
+
+      // .then(response => response.json())
+      // .then(data => {
+      //   console.log('Success:', data);
+      // })
+      // .catch((error) => {
+      //   console.error('Error:', error);
+      // });
+}
+
+function showPassword() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
 }

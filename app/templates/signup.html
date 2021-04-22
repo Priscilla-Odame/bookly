@@ -29,7 +29,10 @@
                 <br><br>
 
                 <label for="psw" ><b>Password:</b></label><br>
-                <input type="password" placeholder="Enter Password" name="psw" id = "password" required>
+                <input type="password" placeholder="Enter Password" name="psw" id = "password"
+                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                 title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
+                 <input type="checkbox" onclick="showPassword()"> <label for="sp"><b>Show Password</b></label>
                 <br><br>
 
                 <button type="button" onclick="handleSignup()">Signup</button><br><br>

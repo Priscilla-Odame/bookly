@@ -20,10 +20,17 @@ function handleLogin() {
         referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
         body: JSON.stringify(data) // body data type must match "Content-Type" header
       })
-      .then(response => response.json())
-      .then(data => {
+      .then(response =>{
+        if (response.status != 201) {
+              console.log('You have a problem');
+              return;
+          } else {
+              let goodData = response.json();
+      goodData.then(data => {
         console.log('Success:', data);
-      })
+        localStorage.setItem('access_token',data.access_token)
+        window.location.href = '/books';
+      })}})
       .catch((error) => {
         console.error('Error:', error);
       });
@@ -42,4 +49,4 @@ function handleLogin() {
     //   .catch((error) => {
     //     console.error('Error:', error);
     //   });
-}
+    }

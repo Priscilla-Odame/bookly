@@ -10,7 +10,8 @@
         <script src={% static 'js/books.js' %}></script>
     </head>
 
-    <body onload = "loadBooks()"><br><br><br><br>   
+    <body onload = "loadBooks()"><br><br><br><br>  
+        <input type="text" id="mySearch" onkeyup="searchBook()" placeholder="Search for books"> 
         <section id="bookList">     
         </section>
     </body>
