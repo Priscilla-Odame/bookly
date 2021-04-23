@@ -4,6 +4,10 @@ function handleFill() {
 }
 
 
+let access_token = localStorage.getItem('access_token')
+
+
+
 function handleBorrow() {
     // console.log("We are about to submit the form");
     // let dateBorrowedVal = document.getElementById('dateborrowed').value;
@@ -24,7 +28,7 @@ function handleBorrow() {
         credentials: 'same-origin', // include, *same-origin, omit
         headers: {
           'Content-Type': 'application/json',
-          'Authorization':'Bearer access_token',
+          'Authorization':`Bearer ${access_token}`,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         redirect: 'follow', // manual, *follow, error
