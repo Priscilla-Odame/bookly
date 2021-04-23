@@ -174,5 +174,5 @@ USE_TZ = True
 CORS_ALLOW_ALL_ORIGINS = True
 LOGIN_REDIRECT_URL = 'home'
 STATIC_URL = '/static/'
-MEDIA_URL = 'uploads/'
+MEDIA_URL = 'https://icedrive.net/1/78WOKFiitr/'
 django_heroku.settings(locals())
