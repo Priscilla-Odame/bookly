@@ -4,6 +4,7 @@ from app.views.user import SignUpAPI, LoginView
 from app.views.books import BookViews, books
 from app.views.category import CategoryView
 from app.views.borrow import OrderBookViewSet, dashboard, borrow, admindashboard
+from app.views.password_reset import SetNewPasswordAPI
 from rest_framework import routers
 from app.views.user import login, register
 from django.conf import settings
@@ -17,6 +18,7 @@ router.register(r'login', LoginView, 'login-api')
 router.register(r'books', BookViews, 'books')
 router.register(r'category',CategoryView, 'category' )
 router.register(r'borrow',OrderBookViewSet,'borrow')
+router.register(r'password',SetNewPasswordAPI,'password-reset')
 # urlpatterns = router.urls
 
 urlpatterns = [
