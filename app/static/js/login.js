@@ -5,6 +5,7 @@ function handleLogin() {
 
     let data = {email: emailVal, password: passwordVal };
     console.log('We are submitting this data to the backend in the right one', data);
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
 
     fetch('https://librariesapp.herokuapp.com/api/login/', {
@@ -13,7 +14,8 @@ function handleLogin() {
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
         credentials: 'same-origin', // include, *same-origin, omit
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'X-CSRFToken': csrftoken,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         redirect: 'follow', // manual, *follow, error
