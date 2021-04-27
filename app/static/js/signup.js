@@ -10,7 +10,7 @@ function handleSignup() {
     console.log('We are submitting this data to the backend in the right one', data);
     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
-    fetch('http://127.0.0.1:8000/api/signup/', {
+    fetch('https://librariesapp.herokuapp.com/api/signup/', {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
