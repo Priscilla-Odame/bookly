@@ -9,6 +9,7 @@ function handleSignup() {
     let data = {firstname: firstnameVal ,lastname: lastnameVal ,email: emailVal,date_of_birth: dobVal, password: passwordVal };
     console.log('We are submitting this data to the backend in the right one', data);
     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    console.log(csrftoken)
 
     fetch('https://librariesapp.herokuapp.com/api/signup/', {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
