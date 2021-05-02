@@ -1,8 +1,9 @@
+let user_id = localStorage.getItem('user_id')
 function loadBorrowedBooks() {
     console.log('We need to load the books now');
 
     // making a GET call to fetch all books
-    fetch('https://librariesapp.herokuapp.com/api/borrow/pk/')
+    fetch(`https://librariesapp.herokuapp.com/api/borrow/${user_id}/`)
     .then(resp => resp.json())
     .then(data => {
         console.log("Data from backend", data)
