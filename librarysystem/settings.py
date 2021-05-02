@@ -172,7 +172,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 CORS_ALLOW_ALL_ORIGINS = True
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'books'
 STATIC_URL = '/static/'
 MEDIA_URL = 'https://icedrive.net/1/78WOKFiitr/'
 django_heroku.settings(locals())

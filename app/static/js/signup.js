@@ -33,6 +33,7 @@ function handleSignup() {
               let goodData = response.json();
       goodData.then(data => {
         console.log('Success:', data);
+        localStorage.setItem('user_id', data.id)
         window.location.href = '/dashboard';
       })}})
       .catch((error) => {
