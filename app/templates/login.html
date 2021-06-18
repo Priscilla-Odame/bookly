@@ -11,29 +11,46 @@
     </head>
 
     <body>
-    <div class="bg-image"></div>
-        <form >
-        {% csrf_token %}
-            
-            <div class="container">
-                <label for="email"><b>Email:</b></label><br>
-                <input class = "input-field" type="email" placeholder="Enter Email" name="email"  id ="email" required>
-                <br><br>
+        <div class='container'>
+            <div class='back_image'>
 
-                <label for="psw" ><b>Password:</b></label><br>
-                <input class = "input-field" type="password" placeholder="Enter Password" name="psw" id = "password" required><br>
-                <input type="checkbox" onclick="showPassword()">Show Password
-                <br><br>
-
-                <button type="button" onclick="handleLogin()">Login</button><br><br>
-                <label>
-                <input type="checkbox" checked="checked" name="remember"  id ="remember"> Remember me
-                </label><br><br>
             </div>
+            
+            <div class='form'>
+                <form>
+                {% csrf_token %}
+                    <h2>Login</h2>
+                    <div>
+                        <label class='label' for='email'><b>Email:</b></label><br>
+                        <input class = 'input-field' type='email' placeholder='Enter Email' name='email'  id ='email' required>
+                     </div>
 
-                <button type="button" class="cancelbtn"  id ="cancelbtn">Cancel</button> 
-                <span class="psw"><a href="#">Forgot password?</a></span>
-        </form>
+                    <div>
+                        <label class='label' for='psw' ><b>Password:</b></label><br>
+                        <input class = 'input-field' type='password' placeholder='Enter Password' name='psw' id = 'password' required>
+                    </div>
+
+                    <div>
+                        <input id='check' type='checkbox' onclick='showPassword()'>
+                        <label id='sp'>Show Password</label>
+                    </div><br>
+
+                    <button class='button' type='button' onclick='handleLogin()'>Login</button><br><br>
+
+                    <div>
+                        <input type='checkbox' checked='checked' name='remember'  id ='remember'>
+                        <label id='sp'> Remember me </label>
+                    </div><br>
+
+                    {% comment %} <button class='button' type='button' class='cancelbtn'  id ='cancelbtn'>Cancel</button> {% endcomment %}
+
+                    <label> 
+                        <span class='login'><a href="#">Forgot password?</a></span><br>
+                        <span class='login'>Do not have an account? <a href='https://librariesapp.herokuapp.com/login/'>Sign up here</a></span>
+                    </label>
+                </form>
+            </div>
+        </div>    
 
     </body>
 

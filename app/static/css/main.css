@@ -1,16 +1,103 @@
 body ,html {
-    margin:auto;
     width: 100%;
-    /* background-color: blueviolet; */
-    background-image: url("../image/image.png");
+    height: 100%;
+    margin: auto;
+    position: fixed;
     background-repeat: no-repeat; 
-    background-size: cover;
-    background-blend-mode: saturation;
+    /* background-size: cover;
+    background-blend-mode: saturation; */
+}
+.container {
+    display:flex;
+    width: 100%;
+    height: 100vh;
 }
 
+.back_image {
+    width:80%;
+    background-image: url('../image/book.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.form {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.label {
+    padding: 10px;
+    color: darkorchid;
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input-field {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 300px;
+    padding: 10px;
+    border-bottom: 2px solid #e29fd7;
+}
+.input-field::placeholder, .input-field  {
+    color: #0a5eb1b7;
+    font-size: 15px;
+}
+
+#sp {
+    font-size: 20px;
+    padding: 10px;
+    top: 3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#check{
+    width: 30px;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    display: inline-block;
+    color: #0a5eb1b7;
+    margin-bottom: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login{
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.button {
+    font-size: 24px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #e29fd7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    width: 300px;
+    height: 40px;
+    border-bottom: 2px solid darkorchid;
+}
+
+
+/* 
 form {
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    background-color: rgb(0,0,0); Fallback color
+    background-color: rgba(0,0,0, 0.4); Black w/opacity/see-through
     color: white;
     font-weight: bold;
     font-size: 20px;
@@ -62,4 +149,4 @@ button:active {
 #cancelbtn a{
     text-decoration: none;
     color: pink;
-}
+} */

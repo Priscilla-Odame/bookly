@@ -8,7 +8,7 @@ function handleLogin() {
     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
 
-    fetch('https://librariesapp.herokuapp.com/api/login/', {
+    fetch('http://localhost:8000/api/login/', {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
