@@ -10,10 +10,28 @@
         <script src={% static 'js/books.js' %}></script>
     </head>
 
-    <body onload = "loadBooks()"><br><br><br><br>  
-        <input type="text" id="mySearch" onkeyup="searchBook()" placeholder="Search for books"> 
-        <section id="bookList">     
-        </section>
+    <body onload = "loadBooks()">
+        <div class='container'> 
+            <div class='nav-bar'>
+                <ul class='ul'>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li style="float:right"><a href="#about">Sign Up</a></li>
+                    <li style="float:right"><p>Or</p></li>
+                    <li style="float:right"><a href="#about">Login</a></li>
+                </ul>
+            </div>
+            <div class='search'>
+                <input class='input' type="text" id="mySearch" onkeyup="searchBook()" placeholder="Search for books"> 
+            </div>
+            <div class='table'>
+                <section id="bookList"> 
+
+                </section>
+
+            </div>
+        </div>
     </body>
 
   </html>
