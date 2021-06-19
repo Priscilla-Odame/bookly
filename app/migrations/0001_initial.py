@@ -47,7 +47,7 @@ class Migration(migrations.Migration):
                 ('author', models.CharField(max_length=100)),
                 ('date_of_publication', models.DateField(default=datetime.date.today)),
                 ('number_of_pages', models.IntegerField()),
-                ('number_of_books', models.IntegerField(default=0)),
+                ('copies', models.IntegerField(default=0)),
             ],
         ),
         migrations.CreateModel(

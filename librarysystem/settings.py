@@ -171,8 +171,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+# DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+# DROPBOX_APP_KEY = env('DROPBOX_APP_KEY')
+# DROPBOX_APP_SECRET_KEY =env('DROPBOX_APP_SECRET_KEY')
+# DROPBOX_OAUTH2_TOKEN = env('DROPBOX_OAUTH2_TOKEN')
+
+
 CORS_ALLOW_ALL_ORIGINS = True
 LOGIN_REDIRECT_URL = 'books'
 STATIC_URL = '/static/'
-MEDIA_URL = 'https://icedrive.net/1/78WOKFiitr/'
+MEDIA_URL = '/media/'
 django_heroku.settings(locals())

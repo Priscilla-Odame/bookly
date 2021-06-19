@@ -16,11 +16,11 @@ class Migration(migrations.Migration):
             name='max_borrow_duration',
             field=models.PositiveIntegerField(default=3, validators=[django.core.validators.MinValueValidator(3), django.core.validators.MaxValueValidator(20)]),
         ),
-        migrations.AlterField(
-            model_name='book',
-            name='number_of_books',
-            field=models.IntegerField(default=0, validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(2000)]),
-        ),
+        # migrations.AlterField(
+        #     model_name='book',
+        #     name='number_of_books',
+        #     field=models.IntegerField(default=0, validators=[django.core.validators.MinValueValidator(0), django.core.validators.MaxValueValidator(2000)]),
+        # ),
         migrations.AlterField(
             model_name='book',
             name='number_of_pages',
