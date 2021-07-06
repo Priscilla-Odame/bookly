@@ -31,11 +31,14 @@ th, td {
 }
 
 .input {
-    height: 44px;
-    border-radius: 5px;
+    height: 48px;
+    display: block;
+    border-radius: 15px;
     outline: none;
     border: none;
-    border-bottom: solid darkorchid;
+    border-bottom: 1px solid #110000;
+    padding: 0 0 0 5px;
+    margin: 2px 0 0 0;
 }
 
 .table {
@@ -50,7 +53,6 @@ th, td {
 }
 
 .container {
-    display: flex;
     flex-direction: column;
 }
 .nav-bar{
@@ -63,7 +65,8 @@ th, td {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #e29fd7;
+    /* background-color: rgb(253, 210, 216 ); */
+    background: linear-gradient(270deg, #fdc4ca 40%, #fb9da6 27% , #f73b4e 80%);
     border-radius: 10px;
   }
   
@@ -73,7 +76,7 @@ th, td {
   
   li a {
     display: block;
-    color: white;
+    color: rgb(13, 13, 12);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -84,7 +87,7 @@ th, td {
   }
   
   .active {
-    background-color: #0a5eb1b7;
+    background-color: #fdc4ca;
   }
 
 #sectionList {
@@ -95,6 +98,19 @@ th, td {
     -webkit-filter: blur(2px);
 
 }
+
+.searchBtn{
+  width:100px;
+  height:44px;
+  background-color:white;
+  border: none;
+  outline: none;
+  background-color: #0a5eb1b7;
+  border-bottom: solid darkorchid;
+
+}
+
+
 
 
 /* #bookList{

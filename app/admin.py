@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import User
 from app.submodels.books import Book
 from app.submodels.category import Category
-from app.submodels.borrow import OrderBook
+from app.submodels.borrow import BorrowBook
 
 # Register your models here.
 
@@ -15,10 +15,10 @@ class BookAdmin(admin.ModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'description', 'books')
 
-class OrderBookAdmin(admin.ModelAdmin):
+class BorrowBookAdmin(admin.ModelAdmin):
     list_display = ('id', 'book', 'borrowed_by','date_borrowed','duration','return_date')
 
 admin.site.register(User, UserAdmin)
 admin.site.register(Book, BookAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(OrderBook, OrderBookAdmin)
+admin.site.register(BorrowBook, BorrowBookAdmin)

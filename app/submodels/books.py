@@ -11,5 +11,8 @@ class Book(models.Model):
     copies = models.IntegerField(default = 0, validators=[MinValueValidator(0), MaxValueValidator(2000)])
     max_borrow_duration = models.PositiveIntegerField( validators=[MinValueValidator(3), MaxValueValidator(20)], default = 3)
 
+    class Meta:
+        unique_together = [['title', 'author']]
+
     def __str__(self) -> str:
         return self.title

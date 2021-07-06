@@ -1,12 +1,12 @@
-from app.serializers.borrow import OrderBookSerializer
-from app.submodels.borrow import OrderBook
+from app.serializers.borrow import BorrowBookSerializer
+from app.submodels.borrow import BorrowBook
 from rest_framework import viewsets
 from django.shortcuts import render
 
 
-class OrderBookViewSet(viewsets.ModelViewSet):
-    serializer_class = OrderBookSerializer
-    queryset = OrderBook.objects.all()
+class BorrowBookViewSet(viewsets.ModelViewSet):
+    serializer_class = BorrowBookSerializer
+    queryset = BorrowBook.objects.all()
 
 def borrow(request):
     return render(request,'borrow.html')

@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from app.submodels.borrow import OrderBook
+from app.submodels.borrow import BorrowBook
 
 
-class OrderBookSerializer(serializers.ModelSerializer):
+class BorrowBookSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         ret = super().to_representation(instance)
         ret['book'] = '%s' %(instance.book.title)
@@ -13,6 +13,6 @@ class OrderBookSerializer(serializers.ModelSerializer):
         validated_data['borrowed_by'] = self.context['request'].user
         return super().create(validated_data)
     class Meta:
-        model = OrderBook
+        model = BorrowBook
         fields = '__all__'
         read_only_fields = ('date_borrowed','borrowed_by','return_date')

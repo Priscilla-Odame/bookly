@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 
-class OrderBook(models.Model):
+class BorrowBook(models.Model):
 
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     borrowed_by = models.ForeignKey(User, related_name='borrower', on_delete=models.CASCADE)
@@ -21,9 +21,9 @@ class OrderBook(models.Model):
     #     return_date = borrow_date + timedelta(days=duration)
     #     return_by = return_date.strftime(return_date, days)
 
-    def get_deadline(self):
-        attname = 'duration'.format() # get the attribute name
-        value = getattr(self, attname) # get the value
-        return_date = borrow_date + timedelta(days=value)
-        return str(return_date)
-    user_deadline = property(get_deadline)
+    # def get_deadline(self):
+    #     attname = 'duration'.format() # get the attribute name
+    #     value = getattr(self, attname) # get the value
+    #     return_date = borrow_date + timedelta(days=value)
+    #     return str(return_date)
+    # user_deadline = property(get_deadline)
