@@ -125,9 +125,7 @@ a{
 
 @media screen and (orientation: landscape) {
 
-    #sp { margin-right: 216px;}
     .login{margin-top: 216px; float:right;}
-    .back_image{display: none;}
     }
     
 /* 
