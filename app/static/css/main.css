@@ -124,8 +124,7 @@ a{
     }
 
 @media screen and (orientation: landscape) {
-
-    .login{margin-top: 216px; float:right;}
+    .login{margin-top: 6px; float:right;}
     }
     
 /* 
