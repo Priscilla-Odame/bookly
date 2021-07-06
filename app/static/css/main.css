@@ -124,7 +124,7 @@ a{
     }
 
 @media screen and (orientation: landscape) {
-    .login{margin-top: 6px; float:right;}
+    .form{margin-top: 6px; float:right;}
     }
     
 /* 
