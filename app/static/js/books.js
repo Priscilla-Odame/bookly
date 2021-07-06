@@ -30,7 +30,7 @@ function populateBooks(data) {
     // create a table row for heading
     let headingRow = document.createElement('tr');
 
-    headingRow.innerHTML = "<th>Book Cover</th><th>Title</th><th>Author</th><th>No. of Pages</th><th>No. of Copies</th><th>Action</th>";
+    headingRow.innerHTML = "<th>Book Cover</th><th>Title</th><th>Author</th><th>No. of Pages</th><th>Copies</th><th>Action</th>";
 
     // now append the heading row to the table
     booksTable.appendChild(headingRow);
@@ -49,7 +49,7 @@ function populateBooks(data) {
         let imageValue = `<img src="${book.book_cover}" alt="book cover for ${book.title}"/>`
         let thumbnail = `<a target="_top" href="${book.book_cover}">${imageValue}</a>`
 
-        dataRow.innerHTML = `<td>${thumbnail}</td><td>${book.title}</td><td>${book.author}</td><td>${book.number_of_pages}</td><td>${book.number_of_books}</td>`;
+        dataRow.innerHTML = `<td>${thumbnail}</td><td>${book.title}</td><td>${book.author}</td><td>${book.number_of_pages}</td><td>${book.copies}</td>`;
 
         const btnBorrow = document.createElement('button');
         btnBorrow.innerHTML = "Borrow";

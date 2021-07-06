@@ -93,6 +93,30 @@ a{
     border-bottom: 2px solid darkorchid;
 }
 
+@media screen and (max-width: 792px) {
+    .form {width: 600px; float: left;}
+    .input-field{float: right;}
+    #sp { margin-right: 216px;}
+    .login{margin-right: 216px; float:right;}
+    .button{width: 200px; }
+    
+  }
+
+@media screen and (max-width: 214px) {
+    .button{width:90px;}
+    .nav-bar a {
+      float: none;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 856px) {
+    .table {margin-top: 46px;}
+    .nav-bar a {
+        float: none;
+        width: 100%;
+        flex-direction: column;
+    }
+  }
 
 /* 
 form {

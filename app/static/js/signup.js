@@ -11,7 +11,7 @@ function handleSignup() {
     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
     console.log(csrftoken)
 
-    fetch('http://localhost:8000/api/signup/', {
+    fetch('https://librariesapp.herokuapp.com/api/signup/', {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -31,6 +31,7 @@ function handleSignup() {
               return;
           } else {
               let goodData = response.json();
+              alert('Signup successful');
       goodData.then(data => {
         console.log('Success:', data);
         localStorage.setItem('user_id', data.id)
