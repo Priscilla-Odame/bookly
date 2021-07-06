@@ -94,10 +94,9 @@ a{
 }
 
 @media screen and (max-width: 792px) {
-    .form {width: 600px; float: left;}
+    
+    .form, .back_image {width: 600px; float: left;}
     .input-field{float: right;}
-    #sp { margin-right: 216px;}
-    .login{margin-right: 216px; float:right;}
     .button{width: 200px; }
     
   }
@@ -109,7 +108,7 @@ a{
       width: 100%;
     }
   }
-  @media screen and (max-width: 856px) {
+@media screen and (max-width: 856px) {
     .table {margin-top: 46px;}
     .nav-bar a {
         float: none;
@@ -117,6 +116,11 @@ a{
         flex-direction: column;
     }
   }
+@media screen and (max-width: 155px) {
+
+    #sp { margin-right: 216px;}
+    .login{margin-right: 216px; float:right;}
+    }
 
 /* 
 form {
