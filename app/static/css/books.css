@@ -83,7 +83,7 @@ th, td {
   }
   
   li a:hover:not(.active) {
-    background-color: #111;
+    background-color:#f73b4e;
   }
   
   .active {
