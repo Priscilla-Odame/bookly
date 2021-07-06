@@ -120,8 +120,16 @@ a{
 
     #sp { margin-right: 216px;}
     .login{margin-right: 216px; float:right;}
+    .back_image{display: none;}
     }
 
+@media screen and (orientation: landscape) {
+
+    #sp { margin-right: 216px;}
+    .login{margin-top: 216px; float:right;}
+    .back_image{display: none;}
+    }
+    
 /* 
 form {
     background-color: rgb(0,0,0); Fallback color
