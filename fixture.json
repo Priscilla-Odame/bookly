@@ -1,0 +1,72 @@
+[
+    {
+        "model":"app.books",
+        "pk": 1,
+        "fields":{
+            "title": "Hero",
+            "book_cover": null,
+            "author": "Meg Cabot",
+            "date_of_publication": "2021-04-07",
+            "number_of_pages": 2,
+            "copies": 4,
+            "max_borrow_duration": 3
+
+        }
+    },
+    {
+        "model":"app.books",
+        "pk": 2,
+        "fields":{
+            "title": "The Mask",
+            "book_cover": null,
+            "author": "Meg Cabot",
+            "date_of_publication": "2021-04-16",
+            "number_of_pages": 1,
+            "copies": 0,
+            "max_borrow_duration": 3
+        }
+    },
+    {
+        "model":"app.books",
+        "pk": 3,
+        "fields":{
+            "title": "Trial",
+            "book_cover": null,
+            "author": "Nora",
+            "date_of_publication": "2021-04-29",
+            "number_of_pages": 5,
+            "copies": 1,
+            "max_borrow_duration": 9
+        }
+        
+    },
+    {
+        "model":"app.books",
+        "pk": 4,
+        "fields":{
+            "title": "The Awakening",
+            "book_cover": null,
+            "author": "Kelley Armstrong",
+            "date_of_publication": "2021-04-22",
+            "number_of_pages": 45,
+            "copies": 3,
+            "max_borrow_duration": 3
+
+        }
+    },
+    {
+        "model":"app.books",
+        "pk": 5,
+        "fields":{
+            "title": "Into the Unknown",
+            "book_cover": null,
+            "author": "Meg Cabot",
+            "date_of_publication": "2021-04-07",
+            "number_of_pages": 4,
+            "copies": 7,
+            "max_borrow_duration": 3
+
+        }
+    }
+]
+
