@@ -1,6 +1,8 @@
 from django.db import models
 from datetime import date
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.files.base import ContentFile
+from django.core.files.uploadhandler import UploadFileException
 
 class Book(models.Model):
     title = models.CharField(max_length=100)
@@ -11,6 +13,7 @@ class Book(models.Model):
     copies = models.IntegerField(default = 0, validators=[MinValueValidator(0), MaxValueValidator(2000)])
     max_borrow_duration = models.PositiveIntegerField( validators=[MinValueValidator(3), MaxValueValidator(20)], default = 3)
 
+    
     class Meta:
         unique_together = [['title', 'author']]
 

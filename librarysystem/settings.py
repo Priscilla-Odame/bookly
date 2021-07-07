@@ -171,10 +171,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-# DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
-# DROPBOX_APP_KEY = env('DROPBOX_APP_KEY')
-# DROPBOX_APP_SECRET_KEY =env('DROPBOX_APP_SECRET_KEY')
-# DROPBOX_OAUTH2_TOKEN = env('DROPBOX_OAUTH2_TOKEN')
+DEFAULT_FILE_STORAGE = 'app.submodels.dropbox.CustomDropBoxStorage'
+DROPBOX_OAUTH2_TOKEN = 'sblr_kU4iTMAAAAAAAAAAZHHKL7TAEnDuNRD7NscCBFjGKgNEsih4UaNw9IVnuch'
+#DROPBOX_OAUTH2_TOKEN = 'm4-vRu5iB9kAAAAAAAAAAbgo0gGMod6Kh4GtRfqt-3nHMG0cUPDafJZAu148LUPf'
+DROPBOX_APP_KEY = 'c5dzxzqeo20n80s'
+DROPBOX_APP_SECRET_KEY ='6cw1p123pri5mld'
+
 
 
 CORS_ALLOW_ALL_ORIGINS = True
