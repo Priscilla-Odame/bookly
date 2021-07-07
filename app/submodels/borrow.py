@@ -15,6 +15,9 @@ class BorrowBook(models.Model):
     duration = models.IntegerField(validators=[MinValueValidator(3), MaxValueValidator(20)], default = 3)
     return_date = models.DateTimeField(default=datetime.today() + timedelta(days=3))
 
+    class Meta:
+        unique_together = [['book', 'borrowed_by']]
+
 
     # def get_deadline(self):
     #     borrow_date = datetime.strptime(date_borrowed, "FORMAT")
