@@ -164,6 +164,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = env('GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE')
+# GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = env('GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE')
+GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE_CONTENTS = env("GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE_CONTENTS")
 
 django_heroku.settings(locals())
