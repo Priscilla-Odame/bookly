@@ -1,0 +1,13 @@
+[
+{
+    "model": "app.company",
+    "pk": 1,
+    "fields": {
+        "deleted_at": null,
+        "name": "GetINNotized Limited",
+        "description": "A wonderful company filled with bright young talents",
+        "created_at": "2021-02-15",
+        "address": 1
+    }
+}
+]

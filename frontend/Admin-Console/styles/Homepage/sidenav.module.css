@@ -1,0 +1,30 @@
+.side_nav {
+    margin: 10px 0 0 0;
+}
+
+.navigation_item {
+    color: #000000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-left: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.navigation_item:first-child {
+    background: #C4C4C4;
+    border-left: 2px solid #DF265E;
+}
+
+.navigation_icon {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.project_icon {
+    margin-left: 60px;
+    font-size: 20px;
+}

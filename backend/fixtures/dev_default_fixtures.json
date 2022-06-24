@@ -1,0 +1,449 @@
+[
+    {
+        "model": "app.address",
+        "pk": 1,
+        "fields": {
+                "deleted_at": null,
+                "street": "Accra",
+                "city": "Accra",
+                "region": "G Accra",
+                "country": "Gh",
+                "postal_code": "123"
+            }
+    },
+
+    {
+        "model": "app.azuredetails",
+        "pk": 1,
+        "fields": {
+                "azure_account_name": "pistorage02",
+                "azure_account_key": "Dd+gTp9RfC4xCybnSOkIr8EcXNTCG5Qg6EL7bG63nh4iE8CIeYchfZ20eSHTiGN/kK2O64oAFY+Fo6iN9XLPww=="
+            }
+    },
+
+    {
+        "model": "app.azuredetails",
+        "pk": 2,
+        "fields": {
+            "azure_account_name": "pistorage03",
+            "azure_account_key": "MQ8ZmZr5rtQnQXrTkVq2U7I5xWo66PgkEEUbUwvjnM16iJUhhu6I/cmWkL2W6JJdjr2XtuGcKJ8jIhPQQhSKMw=="
+            }
+    },
+
+    {
+        "model": "app.azuredetails",
+        "pk": 3,
+        "fields": {
+            "azure_account_name": "pistorage04",
+            "azure_account_key": "IVOqg19dbexvHjTBmzxeFJC2izQIS9lSxMeciTTBDPgby37baR5hZNeL6B73h2AutaDdcwmbxc2+8M7w7lhzOg=="
+            }
+    },
+
+    {
+        "model": "app.company",
+        "pk": 1,
+        "fields": {
+            "deleted_at": null,
+            "name": "GetInnotized",
+            "description": "",
+            "published_at": "2021-03-02",
+            "address": 1,
+            "azure_details":1
+        }
+    },
+
+    {
+        "model": "app.company",
+        "pk": 2,
+        "fields": {
+            "deleted_at": null,
+            "name": "Nestle",
+            "description": "",
+            "published_at": "2021-09-10",
+            "address": 1,
+            "azure_details":2
+        }
+    },
+
+    {
+        "model": "app.company",
+        "pk": 3,
+        "fields": {
+            "deleted_at": null,
+            "name": "GSA",
+            "description": "",
+            "published_at": "2021-09-02",
+            "address": 1,
+            "azure_details":3
+        }
+    },
+
+    {
+        "model":"app.CompaniesWhitelist",
+        "pk":1,
+        "fields":{
+            "name":"GetINNotized Limited Whitelist",
+            "domain_names":["azubiafrica.org"],
+            "company":1
+        }
+    },
+
+    {
+        "model":"app.CompaniesWhitelist",
+        "pk":2,
+        "fields":{
+            "name":"Nestle Whitelist",
+            "domain_names":["azubi.org"],
+            "company":2
+        }
+    },
+
+    {
+        "model":"app.CompaniesWhitelist",
+        "pk":3,
+        "fields":{
+            "name":"GSA Whitelist",
+            "domain_names":["africa.org"],
+            "company":3
+        }
+    },
+
+    {
+        "model": "app.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$rT4gsatKqwca$EBsDpvbAM4gzmhnv8d0pVMweLQphWizXRDf4wLrnZZM=",
+            "firstname": "George",
+            "othernames": "Awesome",
+            "email": "george@somewhere.com",
+            "auth_provider":"email",
+            "company": 1,
+            "date_joined": "2021-03-09T14:35:42.373Z",
+            "last_login": "2021-03-09T14:35:42.373Z",
+            "is_admin": true,
+            "is_verified": false,
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": true,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+
+    {
+        "model": "app.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$rT4gsatKqwca$EBsDpvbAM4gzmhnv8d0pVMweLQphWizXRDf4wLrnZZM=",
+            "firstname": "Johnny",
+            "othernames": "Awesome",
+            "email": "johnny@somewhere.com",
+            "auth_provider":"email",
+            "company": 2,
+            "date_joined": "2021-03-09T14:35:42.373Z",
+            "last_login": "2021-03-09T14:35:42.373Z",
+            "is_admin": false,
+            "is_verified": true,
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+
+    {
+        "model": "app.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$rT4gsatKqwca$EBsDpvbAM4gzmhnv8d0pVMweLQphWizXRDf4wLrnZZM=",
+            "firstname": "Sammy",
+            "othernames": "Awesome",
+            "email": "sammy@somewhere.com",
+            "auth_provider":"email",
+            "company": 3,
+            "date_joined": "2021-03-09T14:35:42.373Z",
+            "last_login": "2021-03-09T14:35:42.373Z",
+            "is_admin": false,
+            "is_verified": true,
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+
+    {
+        "model": "projectapp.project",
+        "pk": 1,
+        "fields": {
+            "deleted_at": null,
+            "name": "Telefonica",
+            "description": "Description of the Telefonica Project",
+            "company": 1,
+            "published_at": "2021-03-03T12:48:18.579Z",
+            "status": "active",
+            "created_by": 1
+        }
+    },
+
+    {
+        "model": "projectapp.project",
+        "pk": 2,
+        "fields": {
+            "deleted_at": null,
+            "name": "Lafarge",
+            "description": "Description of the Lafarge Project",
+            "company": 1,
+            "published_at": "2021-03-03T12:48:18.579Z",
+            "status": "active",
+            "created_by": 1
+        }
+    },
+
+    {
+        "model": "projectapp.project",
+        "pk": 3,
+        "fields": {
+            "deleted_at": null,
+            "name": "TKE",
+            "description": "Description of the TKE Project",
+            "company": 1,
+            "published_at": "2021-03-03T12:48:18.579Z",
+            "status": "active",
+            "created_by": 1
+        }
+    },
+
+    {
+        "model": "projectapp.projectmemberrole",
+        "pk":1,
+        "fields": {
+            "name":"Member"
+        }
+    },
+
+    {
+        "model": "projectapp.projectmemberrole",
+        "pk":2,
+        "fields": {
+            "name":"Admin"
+        }
+    },
+
+    {
+        "model": "projectapp.projectmember",
+        "pk": 1,
+        "fields": {
+            "deleted_at": null,
+            "user_id": 1,
+            "project": 1,
+            "role": 1,
+            "published_at": "2021-03-04",
+            "is_active": true,
+            "access_status": "invited",
+            "approval_status": "1"
+        }
+    },
+
+    {
+        "model": "projectapp.projectmember",
+        "pk": 2,
+        "fields": {
+            "deleted_at": null,
+            "user_id": 1,
+            "project": 2,
+            "role": 1,
+            "published_at": "2021-03-04",
+            "is_active": true,
+            "access_status": "invited",
+            "approval_status": "1"
+        }
+    },
+
+    {
+        "model": "report.report",
+        "pk": 1,
+        "fields": {
+            "deleted_at": null,
+            "name": "Telefonica - Report 1",
+            "description": "Description of Telefonica - Report 1",
+            "project": 1,
+            "published_at": "2021-03-04",
+            "last_modified": "2021-03-04"
+        }
+    },
+
+    {
+        "model": "report.report",
+        "pk": 2,
+        "fields": {
+            "deleted_at": null,
+            "name": "Telefonica - Report 2",
+            "description": "Description of Telefonica - Report 2",
+            "project": 1,
+            "published_at": "2021-03-04",
+            "last_modified": "2021-03-04"
+        }
+    },
+
+    {
+        "model": "report.report",
+        "pk": 5,
+        "fields": {
+            "deleted_at": null,
+            "name": "Telefonica - Report 3",
+            "description": "Description of Telefonica - Report 3",
+            "project": 1,
+            "published_at": "2021-03-04",
+            "last_modified": "2021-03-04"
+        }
+    },
+
+    {
+        "model": "report.report",
+        "pk": 6,
+        "fields": {
+            "deleted_at": null,
+            "name": "Telefonica - Report 4",
+            "description": "Description of Telefonica - Report 4",
+            "project": 1,
+            "published_at": "2021-03-04",
+            "last_modified": "2021-03-04"
+        }
+    },
+
+    {
+        "model": "report.report",
+        "pk": 7,
+        "fields": {
+            "deleted_at": null,
+            "name": "Lafarge - Report 1",
+            "description": "Description of Lafarge - Report 1",
+            "project": 2,
+            "published_at": "2021-03-04",
+            "last_modified": "2021-03-04"
+        }
+    },
+
+    {
+        "model": "report.report",
+        "pk": 8,
+        "fields": {
+            "deleted_at": null,
+            "name": "Lafarge  - Report 2",
+            "description": "Description of Lafarge - Report 2",
+            "project": 2,
+            "published_at": "2021-03-04",
+            "last_modified": "2021-03-04"
+        }
+    },
+
+    {
+        "model": "report.report",
+        "pk": 9,
+        "fields": {
+            "deleted_at": null,
+            "name": "Lafarge  - Report 3",
+            "description": "Description of Lafarge - Report 3",
+            "project": 2,
+            "published_at": "2021-03-04",
+            "last_modified": "2021-03-04"
+        }
+    },
+
+    {
+        "model": "report.report",
+        "pk": 10,
+        "fields": {
+            "deleted_at": null,
+            "name": "TKE - Report 1",
+            "description": "Description of TKE - Report 1",
+            "project": 3,
+            "published_at": "2021-03-04",
+            "last_modified": "2021-03-04"
+        }
+    },
+
+    {
+        "model": "report.report",
+        "pk": 11,
+        "fields": {
+            "deleted_at": null,
+            "name": "TKE  - Report 2",
+            "description": "Description of TKE - Report 2",
+            "project": 3,
+            "published_at": "2021-03-04",
+            "last_modified": "2021-03-04"
+        }
+    },
+
+    {
+        "model": "report.report",
+        "pk": 12,
+        "fields": {
+            "deleted_at": null,
+            "name": "TKE  - Report 3",
+            "description": "Description of TKE - Report 3",
+            "project": 3,
+            "published_at": "2021-03-04",
+            "last_modified": "2021-03-04"
+        }
+    },
+
+    {
+        "model": "report.reportversion",
+        "pk": 1,
+        "fields": {
+            "deleted_at": null,
+            "last_modified": "2021-03-05",
+            "is_active": false,
+            "report": 1
+        }
+    },
+
+    {
+        "model": "report.reportversion",
+        "pk": 2,
+        "fields": {
+            "deleted_at": null,
+            "last_modified": "2021-03-05",
+            "is_active": false,
+            "report": 1
+        }
+    },
+
+    {
+        "model": "report.reportversion",
+        "pk": 3,
+        "fields": {
+            "deleted_at": null,
+            "last_modified": "2021-03-05",
+            "is_active": false,
+            "report": 1
+        }
+    },
+
+    {
+        "model": "report.reportversion",
+        "pk": 4,
+        "fields": {
+            "deleted_at": null,
+            "last_modified": "2021-03-05",
+            "is_active": true,
+            "report": 1
+        }
+    },
+
+    {
+        "model": "report.reportmemberversion",
+        "pk": 1,
+        "fields": {
+            "deleted_at": null,
+            "member": 1,
+            "report_version": 1
+        }
+    }
+    
+]

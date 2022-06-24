@@ -1,0 +1,117 @@
+.modalbox {
+  background: #ffffff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  width: 700px;
+  height: fit-content;
+  margin-top: 30%;
+}
+
+.modalboxinfo {
+  background: #ffffff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  width: 560px;
+  height: 323px;
+}
+
+/* .header {
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px; 
+  text-align: center;
+  line-height: 28px;
+  margin: 40px 50px 0 0;
+  color: #000000;
+} */
+
+.label {
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #000000;
+}
+
+.input {
+  background: #eff0f7;
+  border: 1px solid #eff0f7;
+  box-sizing: border-box;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  width: 552px;
+  height: 64px;
+}
+
+.dismiss {
+  background: #a0a3bd;
+  float: right;
+}
+
+.container {
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 36px;
+  padding: 20px 40px 20px 40px;
+  letter-spacing: 0.7px;
+}
+
+.btn {
+  background: #df265e;
+  border-radius: 16px;
+  width: 200px;
+  height: 51px;
+  border: none;
+  outline: none;
+  margin-top: 30px;
+  color: #ffffff;
+}
+
+.dismissbtn {
+  background: #eff0f7;
+  border-radius: 16px;
+  width: 200px;
+  height: 51px;
+  border: none;
+  outline: none;
+  /* margin-right: 55px; */
+  margin-top: 30px;
+  color: #000000;
+}
+
+.info {
+  margin: 150px;
+}
+
+.closeModalButton {
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 35px;
+  padding: 0;
+  z-index: 10;
+  color: #848487;
+}
+
+.header {
+  text-align: center;
+  margin: 40px 50px 0 0;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.promptText {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  font-size: 24px;
+  line-height: 28px;
+}

@@ -1,0 +1,63 @@
+version: "3.8"
+#  docker container instance for postgres
+services:
+  db_dev:
+    restart: always
+    image: postgres:12.0-alpine
+    env_file:
+      - ./.env.dev
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  # container instance for backend API
+  app:
+    restart: always
+    build:
+      context: .
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py wait_for_db &&
+             python manage.py loaddata dev_default_fixtures.json && 
+             python manage.py runserver 0.0.0.0:8000"
+    # command: gunicorn Push_Insights.wsgi:application -w 2 -b :8000 --reload
+    env_file:
+      - .env.dev
+    environment:
+      - DEBUG=1
+      - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+      - CELERY_BROKER=redis://redis:6379/0
+      - CELERY_BACKEND=redis://redis:6379/0
+    volumes:
+      - .:/pushInsights_dev
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db_dev
+      - redis
+
+    # container instance for celery broker - redis
+  redis:
+    image: redis:alpine
+
+    # container instance for celery async scheduler
+  celery:
+    restart: always
+    environment: 
+      - C_FORCE_ROOT=true
+      - DEBUG=1
+      - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+      - CELERY_BROKER=redis://redis:6379/0
+      - CELERY_BACKEND=redis://redis:6379/0
+    build:
+      context: .
+    command: celery -A Push_Insights worker -l INFO
+    volumes:
+      - .:/pushInsights_dev
+    env_file:
+      - .env.dev
+    depends_on:
+      - db_dev
+      - redis
+      - app
+volumes:
+  pgdata:

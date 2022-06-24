@@ -1,0 +1,46 @@
+version: "3.7"
+
+services:
+  # docker container instance for postgres
+  db:
+    image: postgres:12.0-alpine
+    environment:
+      - .env_file
+    restart: always
+
+  # container instance for backend API  
+  app:
+    image: pushinsightsdev01.azurecr.io/pushinsights_app:latest
+    command: "gunicorn Push_Insights.wsgi:application --bind 0.0.0.0:8000"
+    expose:
+      - 8000
+    depends_on:
+      - db
+    env_file:
+      - .env_file
+    restart: always
+
+  # docker container instance for nginx server
+  nginx:
+    image: pushinsightsdev01.azurecr.io/pushinsights_nginx:latest
+    ports:
+      - "1300:80"
+    depends_on:
+      - app 
+    restart: always
+    
+  # container instance for celery broker - redis
+  redis:
+    image: redis:alpine
+
+  # container instance for celery async scheduler
+  celery:
+    restart: always
+    image: pushinsightsdev01.azurecr.io/pushinsights_celery:latest
+    command: celery -A Push_Insights worker -l info
+    env_file:
+      - .env_file
+    depends_on:
+      - db
+      - redis
+      - app

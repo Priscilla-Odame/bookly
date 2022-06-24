@@ -1,0 +1,22 @@
+.container {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 450px auto;
+    grid-template-rows: 85px auto;
+    grid-template-areas: "header header" "fileupload upload";
+}
+
+.header {
+    grid-area: header;
+}
+
+.upload {
+    background:#FFFFFF;
+    grid-area: upload;
+}
+
+.fileupload {
+    grid-area: fileupload;
+    
+}

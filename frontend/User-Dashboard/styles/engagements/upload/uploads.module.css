@@ -1,0 +1,82 @@
+/* Navigation bar - top*/
+.container {
+    top: 80px;
+    right: 0;
+    position: absolute;
+
+    width: 70%;
+    height: 600px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.top{
+    margin-top: 20.5px;
+}
+
+.title{
+    margin: 14px 10px 00px 150px;
+    float: left;
+}
+
+.searchFilter{
+    margin: 18px 156px 00px 40px;
+    float: right;
+}
+
+.description{
+    display: inline-block;
+    background-color: #FFFFFF;
+
+    margin: 70px 00px 5px 00px;
+    padding-bottom: 28px;
+
+    border: none;
+    border-bottom: 4px solid #DF265E;;
+}
+
+.content{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.noFiles{
+    width: 325px;
+    height: 210px;
+    margin: 80px 20px 20px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.noFiles img{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 284px;
+    height: 210px;
+}
+
+.noFiles h3{
+    color: #000000;
+    /* font-size: 25px; */
+}
+
+.noFiles p{
+    color: #000000;
+    /* font-size: 25px; */
+}
+
+.noFiles p:nth-child(2){
+    /* font-size: 18px; */
+}

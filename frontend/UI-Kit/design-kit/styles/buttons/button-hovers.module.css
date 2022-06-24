@@ -1,0 +1,202 @@
+.btnDefaults_Heading{
+    float: left;
+}
+
+.btnRounded_Heading{
+    float: right;
+}
+
+/*Button types*/
+.btnPrimary{
+    background: #DF265E;
+}
+
+.btnSecondary{
+    background: #2F80ED;
+}
+
+.btnTertiary{
+    background: #0FCDF7;
+}
+
+.btnSuccess{
+    background: #12D09D;
+}
+
+/*Primary button effects*/
+
+.btnPrimary:hover{
+    background: #A62B50;
+}
+
+.btnPrimary:focus{
+    background: #DF265E;
+    border: 6px solid rgba(223, 38, 94, 0.2);
+}
+
+.btnPrimary:disabled{
+    background: rgba(146, 82, 101, 0.5);
+    color: rgb(36, 36, 36);
+}   
+
+/*Secondary button effects*/
+
+.btnSecondary:hover{
+    background: #0e5ec7;
+}
+
+.btnSecondary:focus{
+    background: #1d57a3;
+}
+
+.btnSecondary:disabled{
+    background: #5c6e85;
+    color: rgb(36, 36, 36);
+
+}
+
+/*Tertiary button effects*/
+
+.btnTertiary:hover{
+    background: #0cb3d8;
+}
+
+.btnTertiary:focus{
+    background: #0d94b3;
+}
+
+.btnTertiary:disabled{
+    background: #72bccc;
+    color: rgb(36, 36, 36);
+
+}
+
+/*Success button effects*/
+
+.btnSuccess:hover{
+    background: #06a77c;
+}
+
+.btnSuccess:focus{
+    background: #0d8766;
+}
+
+.btnSuccess:disabled{
+    background: #669e8f;
+    color: rgb(36, 36, 36);
+
+}
+
+/*Default Buttons*/
+.btnDefault{
+    float: left;
+    width: 50%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    justify-items: center; 
+}
+
+.btn_default_large{
+    width: 200px;
+    height: 64px;
+    left: 149px;
+    top: 297px;
+    margin: 2% 2% 2% 2%;
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.btn_default_medium{
+    width: 200px;
+    height: 56px;
+    left: 149px;
+    top: 297px;
+    margin: 2% 2% 2% 2%;
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+
+}
+.btn_default_small{
+    width: 120px;
+    height: 40px;
+    left: 149px;
+    top: 297px;
+    margin: 2% 2% 2% 2%;
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+
+}
+.btn_Rounded{
+    float: right;
+    width: 50%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    justify-items: center;
+}
+.btn_rounded_large{
+    width: 200px;
+    height: 64px;
+    left: 149px;
+    top: 297px;
+    margin: 2% 2% 2% 2%;
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+
+
+}
+.btn_rounded_medium{
+    width: 200px;
+    height: 56px;
+    left: 149px;
+    top: 297px;
+    margin: 2% 2% 2% 2%;
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.btn_rounded_small{
+    width: 120px;
+    height: 40px;
+    left: 149px;
+    top: 297px;
+    margin: 2% 2% 2% 2%;
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+
+}

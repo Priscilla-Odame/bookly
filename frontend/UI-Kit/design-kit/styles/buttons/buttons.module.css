@@ -1,0 +1,141 @@
+.btnDefaults_Heading{
+    float: left;
+}
+
+.btnRounded_Heading{
+    float: right;
+}
+
+/*Button types*/
+.btnPrimary{
+    background: #DF265E;
+}
+
+.btnSecondary{
+    background: #2F80ED;
+}
+
+.btnTertiary{
+    background: #12D09D;
+}
+
+.btnSuccess{
+    background: #DF265E;
+}
+
+#button-primary-h:hover{
+    background-color: #A62B50;
+}
+
+.btnDefault{
+    float: left;
+    width: 50%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    justify-items: center; 
+}
+
+.btn_default_large{
+    width: 200px;
+    height: 64px;
+    left: 149px;
+    top: 297px;
+    margin: 2% 2% 2% 2%;
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.btn_default_medium{
+    width: 200px;
+    height: 56px;
+    left: 149px;
+    top: 297px;
+    margin: 2% 2% 2% 2%;
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+
+}
+.btn_default_small{
+    width: 120px;
+    height: 40px;
+    left: 149px;
+    top: 297px;
+    margin: 2% 2% 2% 2%;
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+
+}
+.btn_Rounded{
+    float: right;
+    width: 50%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    justify-items: center;
+}
+.btn_rounded_large{
+    width: 200px;
+    height: 64px;
+    left: 149px;
+    top: 297px;
+    margin: 2% 2% 2% 2%;
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+
+
+}
+.btn_rounded_medium{
+    width: 200px;
+    height: 56px;
+    left: 149px;
+    top: 297px;
+    margin: 2% 2% 2% 2%;
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.btn_rounded_small{
+    width: 120px;
+    height: 40px;
+    left: 149px;
+    top: 297px;
+    margin: 2% 2% 2% 2%;
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+
+}

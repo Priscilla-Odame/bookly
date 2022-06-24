@@ -1,0 +1,77 @@
+.container {
+    height: 242px;
+    width: 85%;
+    background: #EFF0F7;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    margin-top: 2%;
+    /* display: flex;
+    flex-direction: row;
+    justify-content:space-evenly; */
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: right;
+    margin-left: 18%;
+}
+
+.logo {
+    font-family: 'Work Sans';
+    height: 72px;
+    width: fit-content;
+    background: #ffffff;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    margin-right: 30px;
+    padding: 5px 10px;
+
+    color: #000000;
+}
+
+.details {
+    display: flex;
+    /* justify-content:space-around; */
+
+}
+
+.data {
+    width: 60%;
+}
+
+.data b {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 21px;  
+    
+}
+
+.action {
+    display: flex;
+    height: fit-content;
+
+}
+
+.edit_button, .delete_button {
+    background: #DFDEDE;
+    border-radius: 8px;
+    font-size: 30px;
+    margin-right: 30px;
+    padding: 0 10px 10px;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+.delete_button {
+    color: #DF265E;
+}

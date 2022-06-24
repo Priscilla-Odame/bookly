@@ -1,0 +1,304 @@
+.dashboard {
+  font-family: Work Sans;
+
+}
+
+.navigationpane {
+  width: 4%;
+  height: max-content;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  background-color: white;
+  align-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  padding-top: 5px;
+  padding-bottom: 128px;
+}
+
+.homeicon {
+  width: 32px;
+  height: 32px;
+}
+
+.performanceicon {
+  width: 30px;
+  height: 30px;
+}
+
+.engagementsicon {
+  width: 24px;
+  height: 24px;
+}
+
+.settingsicon {
+  width: 28px;
+  height: 28px;
+}
+
+.logouticon {
+  width: 24px;
+  height: 24px;
+}
+
+.link {
+  float: top;
+  font-family: "Work Sans";
+  text-decoration: none;
+  color: #df265e;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.link a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.link a:hover {
+  background-color: #eff0f7;
+}
+
+.logout {
+  float: top;
+  font-family: "Work Sans";
+  text-decoration: none;
+  color: #df265e;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+/*Dashboard options styling*/
+
+.dashboardoptions {
+  font-family: "Work Sans";
+  position: absolute;
+  top: 0;
+  left: 4%;
+  height: 100%;
+  width: 283px;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  align-content: center;
+  align-items: center;
+  background: url(../../public/bg.png) no-repeat;
+  background-position: right bottom;
+  background-size: 200px 290px;
+  background-color: #EFF0F7;
+}
+
+.performancelogo {
+  position: absolute;
+  height: 36px;
+  width: 75%;
+  padding-top: 7px;
+  font-weight: 600px;
+  left: 10%;
+  line-height: 28px;
+  top: 30px;
+  background: #FCFCFC;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 16px;
+
+}
+
+
+.performanceheading {
+  align-content: flex-start;
+  align-items: initial;
+  width: 70%;
+  font-family: "Work Sans";
+  color: black;
+  /* font-weight: 5px; */
+  margin-top: 70px;
+  margin-left: -65px;
+  line-height: 28px;
+  height: 40px;
+}
+
+.performancedescription {
+  width: 70%;
+  border-color: white;
+  background-color: white;
+  padding-top: 10px;
+  border: white;
+  border-radius: 12px;
+}
+
+.performanceoptiondescription {
+  height: 32px;
+  width: 75%;
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 12px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.portfolioanalytics {
+  position: absolute;
+  height: 43px;
+  width: 75%;
+  padding-top: 0px;
+  padding-left: 10px;
+  font-weight: 600px;
+  left: 10%;
+  line-height: 28px;
+  background: #FCFCFC;
+  border-radius: 10px;
+  font-family: "Work Sans";
+  font-size: 15px;
+  border-style: none;
+  text-align: left;
+  cursor: pointer;
+  top: 155px;
+}
+
+.shopanalytics {
+  position: absolute;
+  height: 43px;
+  width: 75%;
+  padding-top: 0px;
+  padding-left: 10px;
+  font-weight: 600px;
+  left: 10%;
+  line-height: 28px;
+  background: #FCFCFC;
+  border-radius: 10px;
+  font-family: "Work Sans";
+  font-size: 15px;
+  border-style: none;
+  text-align: left;
+  cursor: pointer;
+  top: 220px;
+}
+
+.Helpdesk {
+  position: absolute;
+  width: 80%;
+  padding-left: 15px;
+  font-weight: 600px;
+  left: 4%;
+  /* line-height: 28px; */
+  top: 82%;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+.dashboardcontent {
+  position: fixed;
+  top: 0;
+  left: 24%;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  background: #FCFCFC;
+  align-content: center;
+  align-items: center;
+}
+
+/* .search_acIcon {
+  position: absolute;
+  left: 32%;
+  height: 40;
+  width: 90%;
+  position: fixed;
+  z-index: 1;
+  top: 10;
+  overflow-x: hidden;
+  padding-top: 2px;
+  padding-bottom: 5px;
+} */
+
+.searchbox {
+  height: 43px;
+  width: 20%;
+  background-color: #EFF0F7;
+  border-color: none;
+  border: 10px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  padding-left: 30px;
+  text-align: left;
+}
+
+.user_icons {
+  position: absolute;
+  right: 5;
+  background-color: gray;
+  border: 5px black;
+  border-radius: 7px;
+}
+
+.reportheading {
+  font-family: "Work Sans";
+  position: absolute;
+  /* left: 32%; */
+  height: 40;
+  width: 90%;
+  position: fixed;
+  z-index: 1;
+  top: 10;
+  overflow-x: hidden;
+  padding-top: 2px;
+  padding-bottom: 5px;
+}
+
+.searchbox {
+  height: 42px;
+  width: 20%;
+  background-color: #eff0f7;
+  border-color: none;
+  border: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-left: 30px;
+  text-align: left;
+}
+
+.user_icons {
+  position: absolute;
+  right: 5;
+  background-color: gray;
+  border: 5px black;
+  border-radius: 7px;
+}
+
+.reportheading {
+  position: absolute;
+  left: 32%;
+}
+
+.reports {
+  font-family: "Work Sans";
+  position: absolute;
+  left: 3%;
+  border: #111;
+  width: 100%;
+  height: 80%;
+  border: 2px #df265e;
+  border-color: #df265e;
+  font-weight: 600px;
+
+}

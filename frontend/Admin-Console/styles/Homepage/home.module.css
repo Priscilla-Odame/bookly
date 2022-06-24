@@ -1,0 +1,35 @@
+.body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Work Sans';
+
+}
+
+.dashboard {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 210px auto;
+    grid-template-rows: 90px auto;
+    grid-template-areas: "header header""sidenav main";
+}
+
+.header {
+    background: #ffffff;
+    grid-area: header;
+    border-bottom: 1px solid #ced3d2;
+
+}
+
+.side_nav {
+    height: inherit;
+    background: #ffffff;
+    grid-area: sidenav;
+
+}
+
+.main_content {
+    grid-area: main;
+    background: rgba(196, 196, 196, 0.23);
+}

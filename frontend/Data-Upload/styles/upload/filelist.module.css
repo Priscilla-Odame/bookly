@@ -1,0 +1,90 @@
+/*Filter Icons*/
+.filterIcons {
+  color: #df265e;
+}
+
+/*Sort Button*/
+.sortButton {
+  margin: 0px 0px 0px 5px;
+  border: none;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: #df265e;
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+
+.sortButton:hover{
+    transition: 0.3s;
+    color: #9e0231;
+}
+
+.fileActions {
+  margin: 0px 0px 0px 0px;
+  border: none;
+
+  /* width: 25px; */
+  border-radius: 50px;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: #df265e;
+  background-color: #aeabab;
+  transition: 0.3s;
+}
+/* No file image info */
+
+.noFiles {
+  height: fit-content;
+  margin-top: 70px;
+  left: 40%;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.noFiles img {
+  width: 254px;
+  height: 210px;
+}
+
+.noFiles h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 29px;
+
+  color: #000000;
+}
+
+.noFiles p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #000000;
+}
+
+.user_action {
+  color: crimson;
+  border-radius: 50%;
+  text-decoration: none;
+
+  transition: filter 300ms;
+
+  margin: 0px 0px 0px 0px;
+  border: none;
+
+  text-align: center;
+}
+
+.user_action:hover {
+  filter: brightness(1.2);
+}

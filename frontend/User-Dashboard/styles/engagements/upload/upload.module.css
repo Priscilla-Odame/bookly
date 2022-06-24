@@ -1,0 +1,82 @@
+
+/*Container*/
+.uploadContainer{
+    /* display: flex; */
+    /* flex: 1; */
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+
+    padding: 10px 0px 10px 0px;
+    top: 180px;
+    left: 70px;
+    position: absolute;
+
+    width: 18%;
+    height: 300px;
+
+    background: #FFFFFF;
+    border: 1px solid #eeecec;
+    box-shadow: 1px 1px 1px rgba(2, 0.25, 0.25, 0.25);
+    border-radius: 16px;
+}
+
+/*File upload*/
+
+.lblfileUpload{
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+
+    margin: 0px 0px 10px 80px;
+    background: #DF265E;
+    border: none;
+    border-radius: 50px;
+}
+
+.lblfileUpload div{
+    padding: 0px 0px 10px 18px;
+    font-size: xx-large;
+    color: #FFFFFF;
+}
+
+.uploadContainer p{
+    padding: 0px 0px 0px 60px;
+}
+
+.fileInput{
+    display: none;
+}
+
+/*Directory upload*/
+
+.lbldirUpload{
+    color: #DF265E;
+    border-bottom: 2px solid #DF265E;
+    margin: 0px 0px 10px 50px;
+}
+
+.dirInput{
+    display: none;
+}
+
+/*Comment textarea*/
+.textArea{
+    /* flex-direction: column; */
+    /* justify-content: center;  */
+    /* align-items: center; */
+
+    border: none;
+
+    background: #EFF6F7;
+    border-radius: 16px;
+
+    width: 200px;
+    height: 60px;
+
+    margin: 0px 0px 10px 20px;
+    padding: 0px 0px 25px 15px;
+}

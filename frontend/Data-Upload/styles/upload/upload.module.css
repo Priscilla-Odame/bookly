@@ -1,0 +1,253 @@
+
+/*Container*/
+
+.container {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Work Sans";
+    
+    background-image: url(../../public/assets/images/bg-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.uploadContainer{
+    width: 70%;
+    padding: 0px 0px 20px 0px;
+    height: fit-content;
+    background: #FFFFFF;
+    
+    border: 1px solid #FFFFFF;
+    border-width: thin;
+    box-shadow: 1px 1px 1px rgba(2, 0.25, 0.25, 0.25);
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.upload_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    padding: 0 0 10px 0;
+}
+
+.files_to_upload{ 
+    width: 100%;
+    height: fit-content;
+    background-color: none;
+}
+
+.files_to_upload > div{ 
+    border-bottom: 0.5px solid #FFFFFF;
+    border-width: thin;
+    background-color: #D6D8E7;
+}
+.files_to_upload > div:nth-child(1){
+    border-radius: 16px 16px 0px 0px;
+}
+
+.files_to_upload div li{
+    width: 100%;
+    list-style-type: none;
+    padding: 10px 10px 10px 10px;
+}
+
+.fileInstance{
+    padding: 5px 10px 5px 10px;
+    margin: 2px 0px 2px 0px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.files_to_upload span{
+    cursor: pointer;
+    float: right;
+
+    color: crimson;
+}
+
+/*File upload*/
+
+.lblfileUpload{
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+
+    margin: 0px 0px 10px 80px;
+    background: #DF265E;
+    border: none;
+    border-radius: 50px;
+}
+
+.lblfileUpload div{
+    padding: 0px 0px 10px 18px;
+    font-size: xx-large;
+    color: #FFFFFF;
+}
+
+.uploadContainer p{
+    padding: 0px 0px 0px 60px;
+}
+
+.fileInput{
+    display: none;
+}
+
+/*Directory upload*/
+
+.lbldirUpload{
+    color: #DF265E;
+    border-bottom: 2px solid #DF265E;
+    margin: 0px 0px 10px 50px;
+}
+
+.dirInput{
+    display: none;
+}
+
+/*Comment textarea*/
+.textArea{
+    /* flex-direction: column; */
+    /* justify-content: center;  */
+    /* align-items: center; */
+
+    border: none;
+
+    background: #EFF6F7;
+    border-radius: 16px;
+
+    width: 200px;
+    height: 60px;
+
+    margin: 0px 0px 10px 20px;
+    padding: 0px 0px 25px 15px;
+}
+
+
+.title, .comment, .btn_upload {
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+
+.file_input{
+    display: none;
+}
+
+.btn_selectfiles{
+    float: left;
+    background-color: #D6D8E7;
+    width: 100%;
+    list-style-type: none;
+    padding: 10px 10px 10px 10px;
+
+}
+
+.prgBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+/* 
+    width: 100%;
+    height: 50%; */
+}
+.upload_content p {
+    padding-left: 0px;
+    text-align: center;
+
+}
+
+.upload{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #df265e;
+  
+    width: 321px;
+    height: 45px;
+    margin-bottom: 5%;
+    border-radius: 12px;
+    margin: 15px 10px 15px 20px;
+  
+  
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    transform: 0.5s;
+    transition: 0.5s;
+  
+  }
+.btn_upload {
+    background: #DF265E;
+    border-radius: 10px;
+    color: #FFFFFF;
+    border: none;
+
+    width: 90%;
+    margin: 15px;
+
+}
+
+.title {
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    padding-left: 10px;
+    background: #EFF6F7;
+    height: 40px;
+}
+
+.comment {
+    
+    outline: none;
+    width: 90%;
+    padding-left: 10px;
+    background: #EFF6F7;
+    border: none;
+    border-radius: 8px;
+    margin: 15px;
+}
+
+
+.comment:focus::-webkit-input-placeholder {
+    color: #EFF6F7;
+}
+
+.comment:focus::-moz-placeholder {
+    color: #EFF6F7;
+}
+
+.comment:focus:-moz-placeholder {
+    color: #EFF6F7;
+}
+
+.comment:focus:-ms-input-placeholder {
+    color: #EFF6F7;
+}
+
+
+.circular_upload {
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

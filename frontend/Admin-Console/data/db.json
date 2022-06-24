@@ -1,0 +1,589 @@
+{
+  "report": {
+    "token_id": "72ab6379-c677-4359-92a5-1ca673be4e71",
+    "access_token": "H4sIAAAAAAAEACXTta7tCAJE0X-5qUcy00gvMDMec2Zm-5ih1f8-d7rzirZq_fVjp88wp8XPf39C3Bwp7-5guYs_PsLffjGfqhg0cimCnPs1UTBS64XW-fVgu805I61svsYGtBC8-cBpvGOe9wGYDEuYVl0XsgZTJiP-YZBgQO0hISeOXtlHVZCNSkJ_BSp_RvOnjB30E_oiELuYO159DyRhJb_wLGfBVa4CZa6JIef16Pk3znE6myijanGMBPmqDQv99biTufHBtLiRTrVBHCbd1Ef9Feq1uu6n283gF1E6XyJ4K1OJdUjaDyYXzo5X9FBibGdiSWZDmA1rYBfquDdrEhBDSVAbfDjBHjwVtI5IblIEvt0hDIhl85w5-WhiMQMBTPScYgTFPNSkis2_akKJrCkgaaVsJTRJ1NAmtcBeG3qLQYLP9C0E4inZobKJGDbg7goS-o1BsAjmtsLAIGMGeBKJSGq7MSA7EkYxXebLwfd4JA95UPPBgtS-Z8bARiUcbtAn-7VCE_TBDX0nQW6q1YNCDjB0RgS8-dpTpm8FUY6ymzlLPMeXULeaPhAtVHl73K_ZcSsrZeKF9jLIO0tu7Ilbs4T41oq8Ib8-yaJE9tSgaMu6xkaEPW08grYkG9t-vL_vLNXTo1DGxUOV2Ybbcjisc4mLCA0EdLXtDha21mUyjFtWyQ1Fu2EgvTtW_fIzV39qqGNf4TbOarisNiHAQ2IQbmkQbm4dwc1Zp6IBlW6daDD2J_q40agIdTWLu8HM5AmJeu0-39zexzQT1VCip85Xy8KNmFTFDgdUFQlp2kJU0xhOoev2__z854dbn-8-a-Xze_0efqCaiQKWPvLhozt0YqFa0Fk826O1X8jQxYWyV51tAgA2Cxjermpr5QwYV2MMDfZUChJfiyhMlmnaSg9NWNxWPO48f97sGwvpfecYsGtmvetr4o5WCYzF-thFONMx_3JJd4vAoAaMUsFr84zGoY-HJQZzOQqo8obTXw1apaSMj7wRNeOyaZ4I1vI-qdinVJk6TCiCkrtRVQwlAAYfiYUYz_WiQZzu9iSQEmOOdWisox9cg_QXIx39q6TItbLlz_IV9u8TP-a-wKbhTxW7qmFoGDaHIDPDTaXt1nx7RFjDYMehJB4WK8YX2kytSp-XyMYMAWdnCMLwsi_LtzFMtwRRc_78k_n5NuWqBL-VL8oR0JHMY1uOsIAgqKug4H9Xn7ae0v1Yy99Z0jn8ixXZZAk26Taa9dG3hNeXTzYWqwwPCE72ceixw02_sbrRGyO4DILCvOeXmniBQBMmAEdVzEf6XImglsyv1h1HjUA_D8LW3JR60mE0m6k_2ZYiEFi4SIqtTWvruwXVO4HFI8DVL0rVLwn9BW20hcthzWtHTFi9tMdVezBMHDU6-QP5-6F5VZaBZ140y-q098dlfNjk4eDipr0nXRNc8YX5nlA8ZYuZv9wwKbRRdI2YWo42J9hmDkR7HGjrIqMd5TzDLPLah8163Fy0EEaiMVRhZw7wXO5YZBb0C22sagp51ncU7AKejIbnWeE9SrNT3lzTNNGdK6qiGYBDeMUk2_9n_vt_F3Gi8O4FAAA=.eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVdFU1QtRVVST1BFLUItUFJJTUFSWS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsibW9kZXJuRW1iZWQiOmZhbHNlfX0=",
+    "token_expiry": "2020-12-01T16:15:48Z",
+    "report_config": [
+      {
+        "reportId": "0033e8f7-012f-4b0a-8ac6-948044c0fa40",
+        "reportName": "Telefonica - Independent Variables",
+        "embedUrl": "https://app.powerbi.com/reportEmbed?reportId=0033e8f7-012f-4b0a-8ac6-948044c0fa40&groupId=afa8c4a9-6bb0-4165-8b58-1edefb7bb6ff&w=2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVdFU1QtRVVST1BFLUItUFJJTUFSWS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsibW9kZXJuRW1iZWQiOnRydWV9fQ%3d%3d",
+        "datasetId": null
+      }
+    ]
+  },
+  "report1": {
+    "token_id": "72ab6379-c677-4359-92a5-1ca673be4e71",
+    "access_token": "H4sIAAAAAAAEACXTta7tCAJE0X-5qUcy00gvMDMec2Zm-5ih1f8-d7rzirZq_fVjp88wp8XPf39C3Bwp7-5guYs_PsLffjGfqhg0cimCnPs1UTBS64XW-fVgu805I61svsYGtBC8-cBpvGOe9wGYDEuYVl0XsgZTJiP-YZBgQO0hISeOXtlHVZCNSkJ_BSp_RvOnjB30E_oiELuYO159DyRhJb_wLGfBVa4CZa6JIef16Pk3znE6myijanGMBPmqDQv99biTufHBtLiRTrVBHCbd1Ef9Feq1uu6n283gF1E6XyJ4K1OJdUjaDyYXzo5X9FBibGdiSWZDmA1rYBfquDdrEhBDSVAbfDjBHjwVtI5IblIEvt0hDIhl85w5-WhiMQMBTPScYgTFPNSkis2_akKJrCkgaaVsJTRJ1NAmtcBeG3qLQYLP9C0E4inZobKJGDbg7goS-o1BsAjmtsLAIGMGeBKJSGq7MSA7EkYxXebLwfd4JA95UPPBgtS-Z8bARiUcbtAn-7VCE_TBDX0nQW6q1YNCDjB0RgS8-dpTpm8FUY6ymzlLPMeXULeaPhAtVHl73K_ZcSsrZeKF9jLIO0tu7Ilbs4T41oq8Ib8-yaJE9tSgaMu6xkaEPW08grYkG9t-vL_vLNXTo1DGxUOV2Ybbcjisc4mLCA0EdLXtDha21mUyjFtWyQ1Fu2EgvTtW_fIzV39qqGNf4TbOarisNiHAQ2IQbmkQbm4dwc1Zp6IBlW6daDD2J_q40agIdTWLu8HM5AmJeu0-39zexzQT1VCip85Xy8KNmFTFDgdUFQlp2kJU0xhOoev2__z854dbn-8-a-Xze_0efqCaiQKWPvLhozt0YqFa0Fk826O1X8jQxYWyV51tAgA2Cxjermpr5QwYV2MMDfZUChJfiyhMlmnaSg9NWNxWPO48f97sGwvpfecYsGtmvetr4o5WCYzF-thFONMx_3JJd4vAoAaMUsFr84zGoY-HJQZzOQqo8obTXw1apaSMj7wRNeOyaZ4I1vI-qdinVJk6TCiCkrtRVQwlAAYfiYUYz_WiQZzu9iSQEmOOdWisox9cg_QXIx39q6TItbLlz_IV9u8TP-a-wKbhTxW7qmFoGDaHIDPDTaXt1nx7RFjDYMehJB4WK8YX2kytSp-XyMYMAWdnCMLwsi_LtzFMtwRRc_78k_n5NuWqBL-VL8oR0JHMY1uOsIAgqKug4H9Xn7ae0v1Yy99Z0jn8ixXZZAk26Taa9dG3hNeXTzYWqwwPCE72ceixw02_sbrRGyO4DILCvOeXmniBQBMmAEdVzEf6XImglsyv1h1HjUA_D8LW3JR60mE0m6k_2ZYiEFi4SIqtTWvruwXVO4HFI8DVL0rVLwn9BW20hcthzWtHTFi9tMdVezBMHDU6-QP5-6F5VZaBZ140y-q098dlfNjk4eDipr0nXRNc8YX5nlA8ZYuZv9wwKbRRdI2YWo42J9hmDkR7HGjrIqMd5TzDLPLah8163Fy0EEaiMVRhZw7wXO5YZBb0C22sagp51ncU7AKejIbnWeE9SrNT3lzTNNGdK6qiGYBDeMUk2_9n_vt_F3Gi8O4FAAA=.eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVdFU1QtRVVST1BFLUItUFJJTUFSWS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsibW9kZXJuRW1iZWQiOmZhbHNlfX0=",
+    "token_expiry": "2020-12-01T16:15:48Z",
+    "report_config": [
+      {
+        "reportId": "0033e8f7-012f-4b0a-8ac6-948044c0fa40",
+        "reportName": "Telefonica - Independent Variables",
+        "embedUrl": "https://app.powerbi.com/reportEmbed?reportId=0033e8f7-012f-4b0a-8ac6-948044c0fa40&groupId=afa8c4a9-6bb0-4165-8b58-1edefb7bb6ff&w=2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVdFU1QtRVVST1BFLUItUFJJTUFSWS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldCIsImVtYmVkRmVhdHVyZXMiOnsibW9kZXJuRW1iZWQiOnRydWV9fQ%3d%3d",
+        "datasetId": null
+      }
+    ]
+  },
+  "files": [
+    {
+      "id": 1,
+      "name": "file1"
+    }
+  ],
+  "upload": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    }
+  ],
+  "members": [
+    {
+      "project_id": "3",
+      "firstname": "Jay",
+      "othernames": "jay",
+      "email": "jj@g.com",
+      "role": "jj@g.com",
+      "id": "Rre1Q88"
+    },
+    {
+      "project_id": "3",
+      "firstname": "Jay",
+      "othernames": "jay",
+      "email": "jj@g.com",
+      "role": "jj@g.com",
+      "id": "Fsk-RsA"
+    },
+    {
+      "project_id": "3",
+      "firstname": "Jay",
+      "othernames": "This user ",
+      "email": "hi@g.com",
+      "role": "hi@g.com",
+      "id": "owZ9l5R"
+    },
+    {
+      "project_id": "3",
+      "firstname": "Jeff",
+      "othernames": "Othername",
+      "email": "jeff@othernames.com",
+      "role": "jeff@othernames.com",
+      "id": "jqNarbG"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedictnartey@yahoo.com",
+      "role": "benedictnartey@yahoo.com",
+      "id": "GpQEaYw"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "isIk-fe"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "B4frKxu"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "DRQf6v1"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "30UqkNd"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "jhhMgiT"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "ObSihvD"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "mQ5hzvj"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "MjbZ4W8"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "e6W9BnY"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "gzsOpwE"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "4-_ZOGX"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "Yh05Idf"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "FcJ_RZm"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "baLtl8y"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "hhfnd3E"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "iXTSiun"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "cjB5wsq"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "Cfnlkik"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "NPhl61v"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "MAGTJty"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "5ZjduED"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "XCzAbWj"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "jwgN5W1"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "Vwt6iSs"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "I-aBzgR"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "ZYyr0iQ"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "4gM3hlk"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "xmCeDK9"
+    },
+    {
+      "firstname": "Kojo",
+      "othernames": "Nartey",
+      "email": "benedict.nartey@azubiafrica.org",
+      "role": "benedict.nartey@azubiafrica.org",
+      "id": "1DkHAVT"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project Z",
+      "description": " beautiful fun project create",
+      "id": "6MwYnEd",
+      "status": "Active"
+    },
+    {
+      "name": "Project L",
+      "description": " beautiful fun project create",
+      "id": "VlzU9n6",
+      "status": "Active"
+    },
+    {
+      "name": "Project Maame",
+      "description": "Maame project code fine speed",
+      "id": "H1T5YQX",
+      "status": "Active"
+    },
+    {
+      "name": "Project P",
+      "description": "Nicde doing business here",
+      "id": "rQXiuLx",
+      "status": "Active"
+    },
+    {
+      "name": "Project Mamin",
+      "description": "pisfncvudbcvdsjubvdsucidvbds",
+      "id": "P27e9vw"
+    },
+    {
+      "name": "Project Pless",
+      "description": "fun exciting mood changing",
+      "id": "yfsvVZG"
+    },
+    {
+      "name": "Project C",
+      "description": "ndjnsnckjds jndjndjnscbubv",
+      "id": "tHodm58"
+    },
+    {
+      "name": "Project f",
+      "description": "jdsnucbdsucbdsucbsucbusdu",
+      "id": "qPTWRlB"
+    },
+    {
+      "name": "Jeff A",
+      "description": "sdubvudfnvuidbdubfuvubudids",
+      "id": "Tx2y0ys"
+    },
+    {
+      "name": "Project L",
+      "description": "jsbuxbsuabcxusvsxyaivscxsiavc",
+      "id": "Rc2uwPe"
+    },
+    {
+      "name": "testcase",
+      "description": "test to implement a new project",
+      "status": "Active",
+      "id": "Gtx8fnq"
+    },
+    {
+      "name": "testcase",
+      "description": "test to implement a new project",
+      "status": "Active",
+      "id": "CevMakn"
+    },
+    {
+      "name": "testcase",
+      "description": "test to implement a new project",
+      "status": "Active",
+      "id": "YcxwVCm"
+    },
+    {
+      "name": "testcase",
+      "description": "test to implement a new project",
+      "status": "Active",
+      "id": "4xVUufE"
+    }
+  ],
+  "report_endpoint": [
+    {
+      "id": 13,
+      "project": "http://localhost:8000/projects/api/project/1",
+      "name": "G7 Hub Events",
+      "description": "Test Report",
+      "published_at": "2021-03-12",
+      "last_modified": "2021-03-12"
+    },
+    {
+      "id": 1,
+      "project": "http://localhost:8000/projects/api/project/1",
+      "name": "Telefonica - Report 1",
+      "description": "Description of Telefonica - Report 1",
+      "published_at": "2021-03-04",
+      "last_modified": "2021-03-04"
+    },
+    {
+      "id": 2,
+      "project": "http://localhost:8000/projects/api/project/1",
+      "name": "Telefonica - Report 2",
+      "description": "Description of Telefonica - Report 2",
+      "published_at": "2021-03-04",
+      "last_modified": "2021-03-04"
+    },
+    {
+      "id": 5,
+      "project": "http://localhost:8000/projects/api/project/1",
+      "name": "Telefonica - Report 3",
+      "description": "Description of Telefonica - Report 3",
+      "published_at": "2021-03-04",
+      "last_modified": "2021-03-04"
+    },
+    {
+      "id": 6,
+      "project": "http://localhost:8000/projects/api/project/1",
+      "name": "Telefonica - Report 4",
+      "description": "Description of Telefonica - Report 4",
+      "published_at": "2021-03-04",
+      "last_modified": "2021-03-04"
+    },
+    {
+      "id": 7,
+      "project": "http://localhost:8000/projects/api/project/2",
+      "name": "Lafarge - Report 1",
+      "description": "Description of Lafarge - Report 1",
+      "published_at": "2021-03-04",
+      "last_modified": "2021-03-04"
+    },
+    {
+      "id": 8,
+      "project": "http://localhost:8000/projects/api/project/2",
+      "name": "Lafarge  - Report 2",
+      "description": "Description of Lafarge - Report 2",
+      "published_at": "2021-03-04",
+      "last_modified": "2021-03-04"
+    },
+    {
+      "id": 9,
+      "project": "http://localhost:8000/projects/api/project/2",
+      "name": "Lafarge  - Report 3",
+      "description": "Description of Lafarge - Report 3",
+      "published_at": "2021-03-04",
+      "last_modified": "2021-03-04"
+    }
+  ],
+  "projinvites_endpoint": [
+    {
+      "id": "4",
+      "name": "Community Project",
+      "description": "Description of Community Project",
+      "invited_at": "15-02-2021 09:30 am",
+      "status": "active"
+    },
+    {
+      "id": "5",
+      "name": "Rogg",
+      "description": "Description of Rogg Project",
+      "invited_at": "15-02-2021 09:30 am",
+      "status": "active"
+    }
+  ],
+  "survey_endpoint": [
+    {
+      "id": "1",
+      "name": "Telefonica - Survey 1",
+      "description": "Description of Telefonica - Survey 1",
+      "project": "http://localhost:8000/projects/api/project/1",
+      "completion_deadline": "15-03-2021 9:30 am",
+      "completion_status": "50%"
+    },
+    {
+      "id": "2",
+      "name": "Telefonica - Survey 2",
+      "description": "Description of Telefonica - Survey 2",
+      "project": "http://localhost:8000/projects/api/project/1",
+      "completion_deadline": "21-03-2021 05:00 pm",
+      "completion_status": "30%"
+    },
+    {
+      "id": "3",
+      "name": "Telefonica - Survey 3",
+      "description": "Description Of Telefonica - Survey 3",
+      "project": "http://localhost:8000/projects/api/project/1",
+      "completion_deadline": "21-03-2021 05:00 pm",
+      "completion_status": "20%"
+    },
+    {
+      "id": "4",
+      "name": "Telefonica - Survey 4",
+      "description": "Description of Telefonica - Survey 4",
+      "project": "http://localhost:8000/projects/api/project/1",
+      "completion_deadline": "21-03-2021 05:00 pm",
+      "completion_status": "10%"
+    },
+    {
+      "id": "5",
+      "name": "Lafarge - Survey 1",
+      "description": "Description of Lafarge - Survey 1",
+      "project": "http://localhost:8000/projects/api/project/2",
+      "completion_deadline": "21-03-2021 05:00 pm",
+      "completion_status": "60%"
+    },
+    {
+      "id": "6",
+      "name": "Lafarge - Survey 2",
+      "description": "Description of Lafarge - Survey 2",
+      "project": "http://localhost:8000/projects/api/project/2",
+      "completion_deadline": "21-03-2021 05:00 pm",
+      "completion_status": "30%"
+    },
+    {
+      "id": "7",
+      "name": "Lafarge - Survey 3",
+      "description": "Description of Lafarge - Survey 3",
+      "project": "http://localhost:8000/projects/api/project/2",
+      "completion_deadline": "21-03-2021 05:00 pm",
+      "completion_status": "25%"
+    },
+    {
+      "id": "8",
+      "name": "TKE - Survey 1",
+      "description": "Description of TKE - Survey 1",
+      "project": "http://localhost:8000/projects/api/project/3",
+      "completion_deadline": "21-03-2021 05:00 pm",
+      "completion_status": "90%"
+    },
+    {
+      "id": "9",
+      "name": "TKE - Survey 2",
+      "description": "Description Of TKE - Survey 2",
+      "project": "http://localhost:8000/projects/api/project/3",
+      "completion_deadline": "21-03-2021 05:00 pm",
+      "completion_status": "10%"
+    },
+    {
+      "id": "10",
+      "name": "TKE - Survey 3",
+      "description": "Description Of TKE - Survey 3",
+      "project": "http://localhost:8000/projects/api/project/3",
+      "completion_deadline": "21-03-2021 05:00 pm",
+      "completion_status": "30%"
+    }
+  ],
+  "clients": [
+    {
+      "name": "ScaleWork",
+      "updated_by": "Abubakar Passum",
+      "updated_at": "2020-06-12"
+    },
+    {
+      "name": "Amalitech GmbH",
+      "updated_by": "Adam Adbdul-Ganew",
+      "updated_at": "2020-06-12"
+    },
+    {
+      "name": "Access Bank GH",
+      "updated_by": "Naa Ashiorkor",
+      "updated_at": "2020-06-12"
+    },
+    {
+      "name": "Telefonica",
+      "updated_by": "Robert Njuguna",
+      "updated_at": "2020-06-12"
+    },
+    {
+      "name": "Shujaaz",
+      "updated_by": "Eric Botche",
+      "updated_at": "2020-06-12"
+    },
+    {
+      "name": "Test",
+      "updated_by": "Test Admin",
+      "updated_at": "2020-06-12"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "components/Auth/Azure.js", "components/Auth/Azure/AuthConfig.js", "components/Auth/Azure/graph.js", "components/Auth/Azure/ProfileData.js", "pages/auth/login.js", "pages/index.js", "components/Layout/PrivateLayout.tsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

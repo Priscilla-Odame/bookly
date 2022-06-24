@@ -1,0 +1,220 @@
+[
+    {
+        "model": "auths.user",
+        "pk": "3a6f38cf-9457-498c-8e46-6938499355c6",
+        "fields": {
+            "last_login": null,
+            "firstname": "Samuel",
+            "lastname": "Mensah",
+            "email": "samuel.mensah@mail.com",
+            "password": "pbkdf2_sha256$216000$QzXV5QihAmbs$bYVrXVuq/85OEojgPkPhsr8ofZwqOn7GzIrafPnU0aU=",
+            "phone_number": "+233242098745",
+            "is_admin": true,
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": true,
+            "date_joined": "2021-03-25T15:11:17.644Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auths.user",
+        "pk": "cfa0fb0f-4a00-4a5b-9fd1-0b78a2dbda6b",
+        "fields": {
+            "last_login": null,
+            "firstname": "James",
+            "lastname": "Appiah",
+            "email": "japiah@scalework.com",
+            "password": "pbkdf2_sha256$216000$6ZKYYaQhlfyC$qFrOG5KPv9kttx+ct8xUwGdDdUbbJtrBTwxnCa3w7Aw=",
+            "phone_number": "+233242917523",
+            "is_admin": false,
+            "is_active": true,
+            "is_staff": false,
+            "is_superuser": false,
+            "date_joined": "2021-03-25T15:47:33.649Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auths.user",
+        "pk": "d008be50-cb59-4841-983f-3f82288c123d",
+        "fields": {
+            "last_login": null,
+            "firstname": "Jimmy",
+            "lastname": "Darko",
+            "email": "jdarko@scalework.com",
+            "password": "pbkdf2_sha256$216000$qamHUlFfO98Z$NTb0Z/TOBPkt51Yk6e8QXaRGEGnO8lfS1gwBimQHDiM=",
+            "phone_number": "+41524204242",
+            "is_admin": true,
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": true,
+            "date_joined": "2021-03-29T18:44:56.270Z",
+            "groups": [],
+            "user_permissions": []
+        }
+},
+{
+    "model": "organization.organizationstatus",
+    "pk": "1de926ac-daef-4160-a8d6-47eca7aaf96a",
+    "fields": {
+        "name": "Activated",
+        "updated_by": "3a6f38cf-9457-498c-8e46-6938499355c6",
+        "updated_at": "2021-03-23T09:40:45.510Z"
+    }
+},
+{
+    "model": "organization.organizationstatus",
+    "pk": "c846bc55-1ece-4c8d-8db2-b1f6620099bc",
+    "fields": {
+        "name": "Deactivated",
+        "updated_by": "3a6f38cf-9457-498c-8e46-6938499355c6",
+        "updated_at": "2021-03-23T09:40:56.208Z"
+    }
+},
+{
+    "model": "organization.organization",
+    "pk": "8618df8d-ab97-41d1-9f9a-475c8c7b2666",
+    "fields": {
+        "name": "Client Organization 1",
+        "logo": "path to logo file",
+        "description": "Client Organization 1 Description",
+        "status": "c846bc55-1ece-4c8d-8db2-b1f6620099bc",
+        "updated_by": "3a6f38cf-9457-498c-8e46-6938499355c6",
+        "updated_at": "2021-03-23T09:43:02.567Z"
+    }
+},
+{
+    "model": "organization.contactstatus",
+    "pk": "7a17e9bf-aeba-434d-b110-2f8116e1766e",
+    "fields": {
+        "name": "Deactivated",
+        "updated_by": "3a6f38cf-9457-498c-8e46-6938499355c6",
+        "updated_at": "2021-03-23T09:41:35.795Z"
+    }
+},
+{
+    "model": "organization.contactstatus",
+    "pk": "bf22bf79-57a2-461e-a904-e8e1089c76ab",
+    "fields": {
+        "name": "Activated",
+        "updated_by": "3a6f38cf-9457-498c-8e46-6938499355c6",
+        "updated_at": "2021-03-23T09:41:16.902Z"
+    }
+},
+{
+    "model": "organization.contactrole",
+    "pk": "8c2d37cb-0280-4ba1-a05d-5239bf9597a5",
+    "fields": {
+        "name": "Lead Engineer",
+        "updated_by": "3a6f38cf-9457-498c-8e46-6938499355c6",
+        "updated_at": "2021-03-23T09:39:49.026Z"
+    }
+},
+{
+    "model": "organization.contactrole",
+    "pk": "bfcd2d15-88f6-4270-adf1-aeb4ae17ddd8",
+    "fields": {
+        "name": "Account Manager",
+        "updated_by": "3a6f38cf-9457-498c-8e46-6938499355c6",
+        "updated_at": "2021-03-23T09:38:26.742Z"
+    }
+},
+{
+    "model": "organization.profile",
+    "pk": 1,
+    "fields": {
+        "user": "3a6f38cf-9457-498c-8e46-6938499355c6",
+        "profile_pic": "profile/sample.jpg"
+    }
+},
+{
+    "model": "organization.profile",
+    "pk": 2,
+    "fields": {
+        "user": "cfa0fb0f-4a00-4a5b-9fd1-0b78a2dbda6b",
+        "profile_pic": "profile/sample.jpg"
+    }
+},
+{
+    "model": "organization.contact",
+    "pk": "8ed1b75b-6e61-4953-b0fc-70ac46d2cd17",
+    "fields": {
+        "staff_member": "d008be50-cb59-4841-983f-3f82288c123d",
+        "organization": "8618df8d-ab97-41d1-9f9a-475c8c7b2666",
+        "email": "jose.owusu@organization1.com",
+        "phone_number": "+233303661768",
+        "profile": 1,
+        "status": "bf22bf79-57a2-461e-a904-e8e1089c76ab",
+        "role": "8c2d37cb-0280-4ba1-a05d-5239bf9597a5",
+        "updated_by": "3a6f38cf-9457-498c-8e46-6938499355c6",
+        "updated_at": "2021-03-23T10:22:36.819Z"
+    }
+},
+{
+    "model": "organization.contact",
+    "pk": "b2d67115-d97d-4537-a376-b385cf9c7457",
+    "fields": {
+        "staff_member": "cfa0fb0f-4a00-4a5b-9fd1-0b78a2dbda6b",
+        "organization": "8618df8d-ab97-41d1-9f9a-475c8c7b2666",
+        "email": "jenny.ansah@organization1.com",
+        "phone_number": "+233303661767",
+        "profile": 1,
+        "status": "bf22bf79-57a2-461e-a904-e8e1089c76ab",
+        "role": "bfcd2d15-88f6-4270-adf1-aeb4ae17ddd8",
+        "updated_by": "3a6f38cf-9457-498c-8e46-6938499355c6",
+        "updated_at": "2021-03-23T10:22:12.325Z"
+    }
+},
+{
+    "model": "organization.administratorstatus",
+    "pk": "2260d2f8-ce59-484a-8da6-5460b8c731f6",
+    "fields": {
+        "name": "Activated",
+        "updated_by": "3a6f38cf-9457-498c-8e46-6938499355c6",
+        "updated_at": "2021-03-23T09:40:12.253Z"
+    }
+},
+{
+    "model": "organization.administratorstatus",
+    "pk": "71db63ad-6853-41a9-8518-fb64382a7dc7",
+    "fields": {
+        "name": "Deactivated",
+        "updated_by": "3a6f38cf-9457-498c-8e46-6938499355c6",
+        "updated_at": "2021-03-23T09:40:25.913Z"
+    }
+},
+{
+    "model": "organization.administrator",
+    "pk": "492b04cb-513f-45f3-963b-545f41024461",
+    "fields": {
+        "name": "Simon Asamoah",
+        "email": "simon.asamoah@organization1.com",
+        "organization": "8618df8d-ab97-41d1-9f9a-475c8c7b2666",
+        "phone_number": "+233303661769",
+        "profile": 2,
+        "role": "IT Support Assistant",
+        "status": "2260d2f8-ce59-484a-8da6-5460b8c731f6",
+        "updated_by": "3a6f38cf-9457-498c-8e46-6938499355c6",
+        "updated_at": "2021-03-23T09:48:57.409Z"
+    }
+},
+{
+    "model": "organization.administrator",
+    "pk": "6115d27b-bd75-41cd-b459-696c94aca33c",
+    "fields": {
+        "name": "Ali Owusu",
+        "email": "ali.owusu@organization1.com",
+        "organization": "8618df8d-ab97-41d1-9f9a-475c8c7b2666",
+        "phone_number": "+254722532764",
+        "profile": 2,
+        "role": "Head Of IT",
+        "status": "2260d2f8-ce59-484a-8da6-5460b8c731f6",
+        "updated_by": "3a6f38cf-9457-498c-8e46-6938499355c6",
+        "updated_at": "2021-03-23T09:46:24.257Z"
+    }
+}
+
+]

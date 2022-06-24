@@ -1,0 +1,28 @@
+version: "3.8"
+#  docker container instance for management console postgres db
+services:
+  management_db:
+    restart: always
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=managementpass
+      - POSTGRES_DB=management
+    container_name: management_db
+
+  # container instance for management django-restful API
+  management_api:
+    restart: always
+    build:
+      context: .
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py loaddata default_fixture.json &&
+             python manage.py runserver 0.0.0.0:8001"
+    container_name: management_api
+    volumes:
+      - .:/managementConsole
+    ports:
+      - "8001:8001"
+    depends_on:
+      - management_db

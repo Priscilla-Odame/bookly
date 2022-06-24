@@ -1,0 +1,422 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "serverName": {
+            "type": "string",
+            "metadata": {
+                "description": "Server Name for Azure database for PostgreSQL"
+            }
+        },
+        "administratorLogin": {
+            "type": "string",
+            "minLength": 1,
+            "metadata": {
+                "description": "Database administrator login name"
+            }
+        },
+        "administratorLoginPassword": {
+            "type": "securestring",
+            "minLength": 8,
+            "metadata": {
+                "description": "Database administrator password"
+            }
+        },
+        "skuCapacity": {
+            "type": "int",
+            "defaultValue": 2,
+            "metadata": {
+                "description": "Azure database for PostgreSQL compute capacity in vCores (2,4,8,16,32)"
+            }
+        },
+        "skuName": {
+            "type": "string",
+            "defaultValue": "GP_Gen5_2",
+            "metadata": {
+                "description": "Azure database for PostgreSQL sku name "
+            }
+        },
+        "skuSizeMB": {
+            "type": "int",
+            "defaultValue": 51200,
+            "metadata": {
+                "description": "Azure database for PostgreSQL Sku Size "
+            }
+        },
+        "skuTier": {
+            "type": "string",
+            "defaultValue": "GeneralPurpose",
+            "metadata": {
+                "description": "Azure database for PostgreSQL pricing tier"
+            }
+        },
+        "skuFamily": {
+            "type": "string",
+            "defaultValue": "Gen5",
+            "metadata": {
+                "description": "Azure database for PostgreSQL sku family"
+            }
+        },
+        "postgresqlVersion": {
+            "type": "string",
+            "defaultValue": "11",
+            "allowedValues": [
+                "9.5",
+                "9.6",
+                "10",
+                "11"
+            ],
+            "metadata": {
+                "description": "PostgreSQL version"
+            }
+        },
+        "location": {
+            "type": "string",
+            "defaultValue": "[resourceGroup().location]",
+            "metadata": {
+                "description": "Location for all resources."
+            }
+        },
+        "backupRetentionDays": {
+            "type": "int",
+            "defaultValue": 7,
+            "metadata": {
+                "description": "PostgreSQL Server backup retention days"
+            }
+        },
+        "geoRedundantBackup": {
+            "type": "string",
+            "defaultValue": "Disabled",
+            "metadata": {
+                "description": "Geo-Redundant Backup setting"
+            }
+        },
+        "virtualNetworkName": {
+            "type": "string",
+            "defaultValue": "azure_postgresql_vnet",
+            "metadata": {
+                "description": "Virtual Network Name"
+            }
+        },
+        "subnetName": {
+            "type": "string",
+            "defaultValue": "azure_postgresql_subnet",
+            "metadata": {
+                "description": "Subnet Name"
+            }
+        },
+        "virtualNetworkRuleName": {
+            "type": "string",
+            "defaultValue": "AllowSubnet",
+            "metadata": {
+                "description": "Virtual Network RuleName"
+            }
+        },
+        "vnetAddressPrefix": {
+            "type": "string",
+            "defaultValue": "10.0.0.0/16",
+            "metadata": {
+                "description": "Virtual Network Address Prefix"
+            }
+        },
+        "subnetPrefix": {
+            "type": "string",
+            "defaultValue": "10.0.0.0/16",
+            "metadata": {
+                "description": "Subnet Address Prefix"
+            }
+        }
+    },
+    "variables": {
+        "UniqueSuffix": "[uniqueString(resourceGroup().id)]",
+
+        "piVirtualNetworkName": "piVirtualNetwork",
+        "piVirtualNetworkIPAddressPrefix": "10.10.0.0/16",
+        "piVirtualSubnetName": "default",
+        "piVirtualSubnetIPAddressPrefix": "10.10.0.0/24",
+
+
+        "Microsoft.DBPostgresSQL/servers": "Microsoft.DBforPostgreSQL/servers",
+
+        "piDataLakeStorageName": "[concat('synapsedatalake', substring(variables('UniqueSuffix'),0,5))]",
+        "piDataFactoryName": "[concat('SynapseDataFactory-',substring(variables('UniqueSuffix'),0,5))]",
+        "piDataFactoryLocation": "[resourceGroup().location]",
+        "piDatabricksWorkspaceName": "[concat('piDatabricks-',substring(variables('UniqueSuffix'),0,5))]",
+        "piDatabricksResourceGroupName": "[concat('Databricks-', resourceGroup().name)]",
+        "piDatabricksResourceGroupID": "[concat(subscription().id, '/resourceGroups/', variables('piDatabricksResourceGroupName'))]",
+        "piDatabricksTier": "standard"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2018-12-01",
+            "name": "[variables('piVirtualNetworkName')]",
+            "location": "[resourceGroup().location]",
+            "dependsOn": [],
+            "properties": {
+                "provisioningState": "Succeeded",
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[variables('piVirtualNetworkIPAddressPrefix')]"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "default",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "addressPrefix": "[variables('piVirtualSubnetIPAddressPrefix')]",
+                            "delegations": []
+                        }
+                    },
+                    {
+                        "name": "AzureBastionSubnet",
+                        "properties": {
+                            "addressPrefix": "10.10.100.0/24",
+                            "serviceEndpoints": [],
+                            "delegations": [],
+                            "privateEndpointNetworkPolicies": "Enabled",
+                            "privateLinkServiceNetworkPolicies": "Enabled"
+                        }
+                    }
+                ],
+                "virtualNetworkPeerings": [],
+                "enableDdosProtection": false,
+                "enableVmProtection": false
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(variables('piVirtualNetworkName'), '/', variables('piVirtualSubnetName'))]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', variables('piVirtualNetworkName'))]"
+            ],
+            "properties": {
+                "provisioningState": "Succeeded",
+                "addressPrefix": "[variables('piVirtualSubnetIPAddressPrefix')]",
+                "delegations": []
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(variables('piVirtualNetworkName'), '/', '/AzureBastionSubnet')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/virtualNetworks', variables('piVirtualNetworkName'))]"
+            ],
+            "properties": {
+                "addressPrefix": "10.10.100.0/24",
+                "serviceEndpoints": [],
+                "delegations": [],
+                "privateEndpointNetworkPolicies": "Enabled",
+                "privateLinkServiceNetworkPolicies": "Enabled"
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-06-01",
+            "name": "[variables('piDataLakeStorageName')]",
+            "location": "[resourceGroup().location]",
+            "dependsOn": [],
+            "tags": {},
+            "sku": {
+                "name": "Standard_RAGRS",
+                "tier": "Standard"
+            },
+            "kind": "StorageV2",
+            "properties": {
+                "isHnsEnabled": true,
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": true,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                },
+                "accessTier": "Hot"
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/blobServices",
+            "apiVersion": "2019-06-01",
+            "name": "[concat(variables('piDataLakeStorageName'), '/default')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('piDataLakeStorageName'))]"
+            ],
+            "sku": {
+                "name": "Standard_RAGRS",
+                "tier": "Standard"
+            },
+            "properties": {
+                "cors": {
+                    "corsRules": []
+                },
+                "deleteRetentionPolicy": {
+                    "enabled": false
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/fileServices",
+            "apiVersion": "2019-06-01",
+            "name": "[concat(variables('piDataLakeStorageName'), '/default')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('piDataLakeStorageName'))]"
+            ],
+            "sku": {
+                "name": "Standard_RAGRS",
+                "tier": "Standard"
+            },
+            "properties": {
+                "cors": {
+                    "corsRules": []
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+            "apiVersion": "2019-06-01",
+            "name": "[concat(variables('piDataLakeStorageName'), '/default/nycimagemetadata')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices', variables('piDataLakeStorageName'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('piDataLakeStorageName'))]"
+            ],
+            "properties": {
+                "publicAccess": "None"
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+            "apiVersion": "2019-06-01",
+            "name": "[concat(variables('piDataLakeStorageName'), '/default/nycimages')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices', variables('piDataLakeStorageName'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('piDataLakeStorageName'))]"
+            ],
+            "properties": {
+                "publicAccess": "Blob"
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+            "apiVersion": "2019-06-01",
+            "name": "[concat(variables('piDataLakeStorageName'), '/default/nyctaxidata-curated')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices', variables('piDataLakeStorageName'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('piDataLakeStorageName'))]"
+            ],
+            "properties": {
+                "publicAccess": "None"
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+            "apiVersion": "2019-06-01",
+            "name": "[concat(variables('piDataLakeStorageName'), '/default/nyctaxidata-raw')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices', variables('piDataLakeStorageName'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('piDataLakeStorageName'))]"
+            ],
+            "properties": {
+                "publicAccess": "None"
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+            "apiVersion": "2019-06-01",
+            "name": "[concat(variables('piDataLakeStorageName'), '/default/nysestocktrade')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices', variables('piDataLakeStorageName'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('piDataLakeStorageName'))]"
+            ],
+            "properties": {
+                "publicAccess": "None"
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+            "apiVersion": "2019-06-01",
+            "name": "[concat(variables('piDataLakeStorageName'), '/default/polybase')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices', variables('piDataLakeStorageName'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('piDataLakeStorageName'))]"
+            ],
+            "properties": {
+                "publicAccess": "None"
+            }
+        },
+        {
+            "type": "Microsoft.DataFactory/factories",
+            "apiVersion": "2018-06-01",
+            "name": "[variables('piDataFactoryName')]",
+            "location": "[variables('piDataFactoryLocation')]",
+            "identity": {
+                "type": "SystemAssigned"
+            },
+            "properties": {}
+        },
+        {
+            "type": "Microsoft.Databricks/workspaces",
+            "apiVersion": "2018-04-01",
+            "name": "[variables('piDatabricksWorkspaceName')]",
+            "location": "[resourceGroup().location]",
+            "sku": {
+                "name": "[variables('piDatabricksTier')]"
+            },
+            "properties": {
+                "ManagedResourceGroupId": "[variables('piDatabricksResourceGroupID')]"
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+            "apiVersion": "2019-06-01",
+            "name": "[concat(variables('piDataLakeStorageName'), '/default/polybase')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices', variables('piDataLakeStorageName'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts', variables('piDataLakeStorageName'))]"
+            ],
+            "properties": {
+                "publicAccess": "None"
+            }
+        },
+        {
+            "type": "Microsoft.DBforPostgreSQL/servers",
+            "apiVersion": "2017-12-01",
+            "name": "[parameters('serverName')]",
+            "location": "[parameters('location')]",
+            "sku": {
+                "name": "[parameters('skuName')]",
+                "tier": "[parameters('skuTier')]",
+                "capacity": "[parameters('skuCapacity')]",
+                "size": "[parameters('skuSizeMB')]",
+                "family": "[parameters('skuFamily')]"
+            },
+            "properties": {
+                "createMode": "Default",
+                "version": "[parameters('postgresqlVersion')]",
+                "administratorLogin": "[parameters('administratorLogin')]",
+                "administratorLoginPassword": "[parameters('administratorLoginPassword')]",
+                "storageProfile": {
+                    "storageMB": "[parameters('skuSizeMB')]",
+                    "backupRetentionDays": "[parameters('backupRetentionDays')]",
+                    "geoRedundantBackup": "[parameters('geoRedundantBackup')]"
+                }
+            }
+
+        }
+
+
+    ]
+}

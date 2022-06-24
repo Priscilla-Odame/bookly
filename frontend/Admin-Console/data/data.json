@@ -1,0 +1,96 @@
+{
+    "users": [{
+            "name": "Ulrich",
+            "email": "ulrich@azubiafrica.org",
+            "password": "ulrich1234",
+            "level": 1,
+            "KPI": 3
+        },
+        {
+            "name": "Eric",
+            "email": "eric@azubiafrica.org",
+            "password": "eric1234",
+            "level": 2,
+            "KPI": 4
+        },
+        {
+            "name": "Robert",
+            "email": "robert@azubiafrica.org",
+            "password": "robert1234",
+            "level": 2,
+            "KPI": 3
+        },
+        {
+            "name": "Anita",
+            "email": "anita@azubiafrica.org",
+            "password": "anita1234",
+            "level": 3,
+            "KPI": 3
+        },
+        {
+            "name": "Clifford",
+            "email": "clifford@azubiafrica.org",
+            "password": "clifford1234",
+            "level": 3,
+            "KPI": 1
+        }
+    ],
+    "levels": [{
+            "id": 1,
+            "name": "Campaign",
+            "dashboard": {
+                "width": "800",
+                "height": "486",
+                "src": "https://app.powerbi.com/view?r=eyJrIjoiYTgyODdmOTUtZTRhNC00MmNhLWIwNDQtMmU4NDA2YThhOTlmIiwidCI6IjUwMWM1ODU0LTA1NzAtNDg3Ni04NzkzLWZhNDI3YjUyMjU1NyIsImMiOjl9",
+                "frameborder": "0",
+                "allowFullScreen": true
+            }
+        },
+        {
+            "id": 2,
+            "name": "Initiative",
+            "dashboard": {
+                "width": "800",
+                "height": "486",
+                "src": "https://app.powerbi.com/view?r=eyJrIjoiNTA5NTE1ZTQtYjMwMC00YWIyLThkNzktNDc4ZTg1ZjAwZTg3IiwidCI6IjUwMWM1ODU0LTA1NzAtNDg3Ni04NzkzLWZhNDI3YjUyMjU1NyIsImMiOjl9",
+                "frameborder": "0",
+                "allowFullScreen": true
+            }
+        },
+        {
+            "id": 3,
+            "name": "Individual",
+            "dashboard": {
+                "width": "800",
+                "height": "486",
+                "src": "https://app.powerbi.com/view?r=eyJrIjoiZmQ1MjQ3MzAtNjY2MC00NDUwLTk4YTgtYjY2MjA2MDdjMGJkIiwidCI6IjUwMWM1ODU0LTA1NzAtNDg3Ni04NzkzLWZhNDI3YjUyMjU1NyIsImMiOjl9",
+                "frameborder": "0",
+                "allowFullScreen": true
+            }
+        }
+    ],
+    "KPI": [{
+            "id": 1,
+            "name": "MTD Achievement"
+        },
+        {
+            "id": 2,
+            "name": "E-Order Rate"
+        },
+        {
+            "id": 3,
+            "name": "Sales Push"
+        },
+        {
+            "id": 4,
+            "name": "E-Order Push"
+        }
+    ],
+    "projects": [{
+        "id": "3",
+        "name": "Jay",
+        "description": "jay",
+        "status": "jj@g.com",
+        "company": "jj@g.com"
+    }]
+}

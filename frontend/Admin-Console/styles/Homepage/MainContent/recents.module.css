@@ -1,0 +1,224 @@
+.color_code_description {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 99%;
+    height: 20%;
+    margin-top: 35px;
+    margin-left: 5px;
+    /* background-color: chocolate; */
+}
+
+.rHeading {
+    font-size: 25px;
+    padding-left: 2.5%;
+    padding-right: 5%;
+    font-weight: 600;
+}
+
+.report_bubble {
+    padding-right: 3%;
+}
+
+.bub_1 {
+
+    width: 2.5vh;
+    height: 2.5vh;
+    margin-right: 1%;
+    border-radius: 50%;
+    background-color: rgb(246, 66, 102);
+}
+
+.invites_bubble {
+    padding-right: 3%;
+}
+
+.bub_2 {
+    width: 2.5vh;
+    height: 2.5vh;
+    margin-right: 1%;
+    border-radius: 50%;
+    background-color: rgb(56, 56, 230);
+}
+
+.survey_bubble {
+    padding-left: 0%;
+
+}
+
+.bub_3 {
+    width: 2.5vh;
+    height: 2.5vh;
+    margin-right: 1%;
+    border-radius: 50%;
+    background-color: rgb(199, 34, 199);
+}
+
+/*Styling for recents tab*/
+.recents_tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    margin-top: 15px;
+    margin-left: 5px;
+    /* background-color: chocolate; */
+}
+
+
+/*Styling for horizontal line in buttons*/
+.horizon_division {
+    background-color: rgb(246, 100, 122);
+    border-color: rgb(246, 90, 122);
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+/*Styling for recent tile 1*/
+.recent1 {
+    padding-right: 4%;
+    transition: 0.3s;
+    margin-left: 0.8%;
+}
+
+.btn_recent1 {
+    font-size: 11px;
+    width: 135px;
+    height: 90px;
+    float: left;
+    margin-right: 1%;
+    background-color: white;
+    border-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn_recent1:hover {
+    background-color: rgb(204, 204, 204);
+    transition: 0.3s;
+}
+
+
+
+
+/*Styling for recent tile 2*/
+.recent2 {
+    padding-right: 4%;
+    transition: 0.3s;
+}
+
+.btn_recent2 {
+    font-size: 11px;
+    width: 135px;
+    height: 90px;
+    float: left;
+    margin-right: 1%;
+    background-color: white;
+    border-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn_recent2:hover {
+    background-color: rgb(204, 204, 204);
+    transition: 0.3s;
+}
+
+
+/*Styling for recent tile 3*/
+.recent3 {
+    padding-right: 4%;
+    transition: 0.3s;
+}
+
+.btn_recent3 {
+    font-size: 11px;
+    width: 135px;
+    height: 90px;
+    float: left;
+    margin-right: 1%;
+    background-color: white;
+    border-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn_recent3:hover {
+    background-color: rgb(204, 204, 204);
+    transition: 0.3s;
+}
+
+
+/*Styling for recent tile 4*/
+.recent4 {
+    padding-right: 4%;
+    transition: 0.3s;
+}
+
+.btn_recent4 {
+    font-size: 11px;
+    width: 135px;
+    height: 90px;
+    float: left;
+    margin-right: 1%;
+    background-color: white;
+    border-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn_recent4:hover {
+    background-color: rgb(204, 204, 204);
+    transition: 0.3s;
+}
+
+
+/*Styling for recent tile 5*/
+.recent5 {
+    padding-right: 5%;
+    transition: 0.3s;
+}
+
+.btn_recent5 {
+    font-size: 11px;
+    width: 135px;
+    height: 90px;
+    float: left;
+    margin-right: 1%;
+    background-color: white;
+    border-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn_recent5:hover {
+    background-color: rgb(204, 204, 204);
+    transition: 0.3s;
+}
+
+
+/*Styling for recent tile 6*/
+.recent6 {
+    padding-right: 5%;
+    transition: 0.3s;
+}
+
+.btn_recent6 {
+    font-size: 11px;
+    width: 135px;
+    height: 90px;
+    float: left;
+    background-color: white;
+    border-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn_recent6:hover {
+    background-color: rgb(204, 204, 204);
+    transition: 0.3s;
+}

@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  nextjs:
+    ports:
+      - 3000:3000
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/pushInsights_Front_prod
+      - /pushInsights_Front_prod/node_modules
+      - /pushInsights_Front_prod/.next

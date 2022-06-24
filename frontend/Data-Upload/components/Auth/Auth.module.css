@@ -1,0 +1,58 @@
+.microsoftbtn {
+  border: 2px solid #d6d8e7;
+  box-sizing: border-box;
+  border-radius: 50px;
+  width: 85%;
+  height: 45px;
+  background: #ffffff;
+}
+
+.input {
+  background: #eff6f7;
+  border: 1px solid #df265e;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  outline: none;
+  border: none;
+  height: 45px;
+  width: 321px;
+  margin: 2%;
+  padding-left: 24px;
+  align-items: center;
+  display: flex;
+  margin-left: 30px;
+}
+
+.inputt {
+  width: 250px;
+  height: 45px;
+  border: none;
+  background: #eff6f7;
+  outline: none;
+}
+
+.btn {
+  background: #df265e;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  width: 321px;
+  height: 45px;
+
+}
+
+.fgtpw {
+  color: #df265e;
+  padding: 3;
+  text-decoration: none;
+  margin: 1%;
+}
+
+.password_icon {
+  font-size: 24px;
+  color: #AAAAAA;
+  margin-left: 5px;
+}

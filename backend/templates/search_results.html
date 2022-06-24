@@ -1,0 +1,9 @@
+<h1>Search Results</h1>
+
+<ul>
+  {% for project in object_list %}
+    <li>
+      {{ project.name }}, {{ project.description }}
+    </li>
+  {% endfor %}
+</ul>

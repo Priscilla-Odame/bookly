@@ -1,0 +1,178 @@
+.clientTab {
+  box-sizing: border-box;
+  height: 59px;
+  width: 87.5%;
+  background: rgba(239, 240, 247, 1);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  margin-left: 17%;
+}
+
+.clientTabContent {
+  margin: auto;
+}
+
+.filterBtn {
+  margin-top: 18px;
+  margin-left: 350px;
+  cursor: pointer;
+}
+
+.filterWrapper {
+  width: 638px;
+  margin-left: 4%;
+}
+
+.NofilterWrapper {
+  height: 40px;
+}
+
+.searchBox {
+  border-radius: 16px;
+  width: 80%;
+  height: 35px;
+  margin-left: 26%;
+  background: rgba(239, 240, 247, 1);
+  outline: 0;
+  padding: 10px;
+  text-align: left;
+  font-family: Work Sans;
+  font-weight: Regular;
+  font-size: 16px;
+  border: none;
+ 
+}
+
+.closeIcon {
+  float: right;
+  cursor: pointer;
+}
+
+.roleToggle {
+  color: rgba(0, 0, 0, 1);
+  font-family: Work Sans;
+  font-weight: Medium;
+  font-size: 18px;
+  padding: 15px;
+  float: left;
+  text-indent: 10px;
+  cursor: pointer;
+}
+
+.clientBorder {
+  border-bottom: 1px solid #df265e;
+  padding-bottom: 18px;
+}
+
+.addBtn {
+  width: 97px;
+  height: 26px;
+  background: rgba(223, 38, 94, 1);
+  border-radius: 16px;
+  margin-right: 60px;
+  margin-top: 16px;
+  overflow: hidden;
+  float: right;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.addPlus {
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+  position: relative;
+  float: left;
+  left: 2px;
+}
+
+.addTxt {
+  color: rgba(255, 255, 255, 1);
+  font-family: Work Sans;
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: right;
+}
+
+.tableContent {
+  font-size: 14px;
+  text-align: left;
+}
+
+.ellipse {
+  width: 40px;
+  height: 40px;
+  background: #c4c4c4;
+  border-radius: 50%;
+}
+
+.TableBody{
+  border-collapse: collapse;
+    width: 87%;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    margin-left: 17%;
+}
+.theadtxt {
+  font-family: Work Sans;
+  font-weight: SemiBold;
+  font-size: 24px;
+  opacity: 1;
+  text-transform: uppercase;
+  border-bottom: 1px solid #a0a3bd;
+}
+
+.tdata {
+  border: hidden;
+  border-bottom: 1px solid #a0a3bd;
+  text-align: left;
+
+}
+
+.taction {
+  border-bottom: 1px solid #a0a3bd;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.tbody {
+  width: 635px;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.successBar {
+  width: 50%;
+  height: 36px;
+  background: #28a745;
+  border-radius: 10px;
+  margin-left: 17%;
+  
+}
+
+.delSuccess {
+  width: 50%;
+  height: 36px;
+  background: #DC3545;
+  border-radius: 10px;
+  margin-left: 17%;
+}
+
+.successBarClose {
+  float: right;
+  margin-right: 20px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.successTxt {
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #ffffff;
+}

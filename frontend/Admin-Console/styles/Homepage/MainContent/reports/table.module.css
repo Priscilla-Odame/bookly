@@ -1,0 +1,24 @@
+.Table {
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+.Table td,
+.Table th {
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+  padding-right: 50px;
+
+}
+
+.Table tr:hover {
+  background-color: #ddd;
+}
+
+.Table th {
+  text-align: left;
+  /* background: #0a5eb1b7; */
+  background: #fff;
+
+}

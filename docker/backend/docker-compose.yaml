@@ -1,0 +1,56 @@
+version: "3.7"
+
+services:
+  # docker container for django-rest-api
+  app:
+    volumes:
+      - static_volume:/vol/web
+    env_file:
+      - .env_file
+    build:
+      context: ../../
+      dockerfile: ./docker/backend/Dockerfile
+    expose:
+      - 8000
+    depends_on:
+      - db
+
+  # docker contailner for nginx server
+  nginx:
+    build: ./nginx
+    volumes:
+      - static_volume:/vol/static
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+
+  # docker container instance for postgres
+  db:
+    image: postgres:12.0-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - .env_file
+
+  # container instance for celery broker - redis
+  redis:
+    image: redis:alpine
+
+  # container instance for celery async scheduler
+  celery:
+    restart: always
+    build:
+      context: ../../
+      dockerfile: ./docker/backend/Dockerfile
+    command: celery -A Push_Insights worker -l info
+    env_file:
+      - .env_file
+    depends_on:
+      - db
+      - redis
+      - app
+
+volumes:
+  static_volume:
+  postgres_data:

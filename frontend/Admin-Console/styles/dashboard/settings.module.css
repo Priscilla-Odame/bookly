@@ -1,0 +1,609 @@
+.dashboard {
+  font-family: Work Sans;
+
+}
+
+.navigationpane {
+  width: 4%;
+  height: max-content;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  background-color: white;
+  align-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  /* padding-top: 5px;
+  padding-bottom: 128px; */
+  margin-bottom: 125px;
+  margin-top: 5px;
+}
+
+.homeicon {
+  width: 32px;
+  height: 32px;
+}
+
+.performanceicon {
+  width: 30px;
+  height: 30px;
+}
+
+.engagementsicon {
+  width: 24px;
+  height: 24px;
+}
+
+.settingsicon {
+  width: 28px;
+  height: 28px;
+}
+
+.logouticon {
+  width: 24px;
+  height: 24px;
+}
+
+.link {
+  font-family: Work Sans;
+  text-decoration: none;
+  color: #df265e;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0px;
+  padding-bottom: 35px;
+}
+
+.link a {
+  display: block;
+  color: white;
+  text-align: center;
+  /* padding: 14px 16px; */
+  text-decoration: none;
+}
+
+.link a:hover {
+  background-color: #EFF0F7;
+}
+
+.logout {
+  float: top;
+  font-family: Work Sans;
+  text-decoration: none;
+  color: #df265e;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0px;
+  margin-top: 215px;
+}
+
+.dashboardoptions {
+  font-family: "Work Sans";
+  position: absolute;
+  top: 0;
+  left: 4%;
+  height: 100%;
+  width: 283px;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  align-content: center;
+  align-items: center;
+  background: url(../../public/bg.png) no-repeat;
+  background-position: right bottom;
+  background-size: 200px 290px;
+  background-color: #EFF0F7;
+
+}
+
+.homelogo {
+  position: absolute;
+  height: 43px;
+  width: 75%;
+  padding-top: 7px;
+  font-weight: 600px;
+  left: 10%;
+  line-height: 28px;
+  top: 30px;
+  background: #FCFCFC;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.company {
+  position: absolute;
+  height: 43px;
+  width: 75%;
+  padding-top: 0px;
+  padding-left: 10px;
+  font-weight: 600px;
+  left: 10%;
+  line-height: 28px;
+  background: #FCFCFC;
+  border-radius: 10px;
+  font-family: "Work Sans";
+  font-size: 15px;
+  border-style: none;
+  text-align: left;
+  cursor: pointer;
+  top: 155px;
+}
+
+.campaign {
+  position: absolute;
+  height: 43px;
+  width: 75%;
+  padding-top: 0px;
+  padding-left: 10px;
+  font-weight: 600px;
+  left: 10%;
+  line-height: 28px;
+  background: #FCFCFC;
+  border-radius: 10px;
+  font-family: "Work Sans";
+  font-size: 15px;
+  border-style: none;
+  text-align: left;
+  cursor: pointer;
+  top: 220px;
+
+
+}
+
+.projects {
+  position: absolute;
+  height: 43px;
+  width: 75%;
+  text-decoration: none;
+  line-height: 28px;
+  top: 290px;
+  left: 10%;
+  color: #0a0a0a;
+  background: #FCFCFC;
+  border-radius: 10px;
+  font-family: "Work Sans";
+  font-size: 15px;
+  font-weight: 600px;
+  border-style: none;
+  text-align: left;
+  cursor: pointer;
+  display: inline-block;
+  padding-top: 8px;
+  padding-left: 10px;
+
+
+
+}
+
+.projects:hover {
+  text-decoration: none;
+  color: black;
+
+}
+
+.users {
+  position: absolute;
+  height: 43px;
+  width: 75%;
+  text-decoration: none;
+  line-height: 28px;
+  top: 350px;
+  left: 10%;
+  color: #0a0a0a;
+  background: #FCFCFC;
+  border-radius: 10px;
+  font-family: "Work Sans";
+  font-size: 15px;
+  font-weight: 600px;
+  border-style: none;
+  text-align: left;
+  cursor: pointer;
+  display: inline-block;
+  padding-top: 8px;
+  padding-left: 10px;
+
+}
+
+.users:hover {
+  text-decoration: none;
+  color: black;
+
+}
+
+.engagement {
+  position: absolute;
+  height: 40px;
+  width: 80%;
+  padding-top: 5px;
+  padding-left: 47px;
+  font-weight: 600px;
+  left: 7%;
+  line-height: 28px;
+  top: 105px;
+  border-radius: 16px;
+  font-size: 18px;
+
+}
+
+.seticon {
+  width: 24px;
+  height: 24px;
+  margin-left: 13%;
+  margin-top: 111px;
+
+
+}
+
+
+
+.helpdesk {
+  position: absolute;
+  width: 80%;
+  padding-left: 15px;
+  font-weight: 600px;
+  left: 4%;
+  /* line-height: 28px; */
+  top: 82%;
+  border-radius: 16px;
+  font-size: 14px;
+  font-family: "Work Sans"
+}
+
+.red {
+  color: #df265e;
+}
+
+.blue {
+  position: absolute;
+  margin-left: 75px;
+  background-color: #6473FF;
+  color: white;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 3px 10px;
+  border-radius: 15px;
+}
+
+.dashboardcontent {
+  position: absolute;
+  top: 0;
+  left: 24%;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  background: #FCFCFC;
+  align-content: center;
+  align-items: center;
+}
+
+.search {
+  position: absolute;
+  height: 42px;
+  border-radius: 10px;
+  width: 290px;
+  font-family: "Work Sans";
+  font-weight: 100px;
+  left: 27px;
+  line-height: 24px;
+  top: 30px;
+  background-color: #EFF0F7;
+  font-size: 18px;
+  outline: none;
+  color: #0d0d0e;
+  border: none;
+  padding-left: 45px;
+}
+
+.search_icon {
+  position: absolute;
+  left: 45px;
+  top: 42px;
+  height: 20px;
+  width: 20px;
+
+}
+
+.user_icon {
+  position: absolute;
+  left: 68%;
+  top: 30px;
+  height: 42px;
+  width: 42px;
+
+}
+
+.survey {
+  position: absolute;
+  width: 69%;
+  font-family: "Work Sans";
+  font-weight: 600px;
+  left: 30px;
+  top: 75px;
+  border-radius: 16px;
+  font-size: 20px;
+}
+
+.saveprojectbutton {
+  /* padding-top: 10%; */
+  color: #ffffff;
+  background-color: #df265e;
+  width: 150px;
+  height: 42px;
+  border-radius: 10px;
+  border-color: transparent;
+  font-family: "Work Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+
+.button {
+  color: #ffffff;
+  background-color: #df265e;
+  width: 150px;
+  height: 42px;
+  border-radius: 10px;
+  border-color: transparent;
+  font-family: "Work Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+
+.button:focus {
+  outline: transparent;
+}
+
+.progress {
+  position: absolute;
+  width: 69%;
+  font-family: "Work Sans";
+  font-weight: 600px;
+  left: 30px;
+  top: 180px;
+  border-radius: 16px;
+  font-size: 18px;
+}
+
+.card {
+  height: 155px;
+  width: 140px;
+  left: 0px;
+  margin-top: 30px;
+  padding: 15px 15px;
+  border: 2.5px solid #D6D8E7;
+  box-sizing: border-box;
+  border-radius: 12px;
+  font-family: "Work Sans";
+  font-size: 15px;
+  float: left;
+  margin-right: 30px;
+
+}
+
+.bold {
+  margin-left: -340px;
+}
+
+.next_icon {
+  height: 8px;
+  width: 8px;
+  margin-left: 62%;
+}
+
+.push_mail {
+  position: absolute;
+  width: 69%;
+  font-weight: 600px;
+  left: 130px;
+  top: 150px;
+  border-radius: 16px;
+  font-family: "Work Sans";
+  font-size: 18px;
+}
+
+.note {
+  /* height: 550px; */
+  width: fit-content;
+  height: fit-content;
+  left: 0px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 15px 15px;
+  border: 2.5px solid #D6D8E7;
+  box-sizing: border-box;
+  border-radius: 12px;
+  font-family: "Work Sans";
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+
+/* .modal{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+} */
+
+.modalWrapper {
+  width: 600px;
+  height: 420px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+  background: rgba(243, 242, 242, 0.1);
+  color: #000;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.closeModalButton {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  z-index: 10;
+}
+
+.modalContent {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "Work Sans";
+
+
+}
+
+.form {
+  margin-left: 60px;
+  margin-top: -35px;
+  font-size: 20px;
+}
+
+.input {
+  margin-left: 30px;
+}
+
+/*All modal input fields with the exception of company*/
+
+.modalinputfields {
+  width: 90%;
+  height: 30px;
+  float: left;
+  font-family: "Work Sans";
+  font-size: 12px;
+  margin-bottom: 3%;
+  margin-right: 3%;
+  background-color: #eff0f7;
+  border-radius: 12px;
+  border-color: transparent;
+  padding-left: 22px;
+
+}
+
+
+.errorInput {
+  border: solid 2px #df265e;
+  font-family: "Work Sans";
+
+}
+
+.Button {
+  display: flex;
+  justify-content: center;
+  margin-left: -100px;
+}
+
+.project {
+  background: #FCFCFC;
+
+}
+
+.projectTable {
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+}
+
+
+.projectTable td,
+.projectTable th {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.projectTable tr:hover {
+  background-color: #ddd;
+}
+
+.projectTable th {
+  padding: 10px;
+  text-align: center;
+  background-color: #df265e;
+  color: white;
+}
+
+.opration {
+  text-align: center;
+}
+
+.Addbutton {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  /* background-color: #df265e; */
+}
+
+.Addbutton:active {
+  border: 1px solid blue;
+}
+
+.DelButton {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #df265e;
+  color: white;
+  border-radius: 4px;
+}
+
+.DelButton:active {
+  border: 1px solid white;
+}
+
+.MemberList {
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 80%;
+}
+
+.MemberList td,
+.MemberList th {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.MemberList tr:hover {
+  background-color: #ddd;
+}
+
+.MemberList th {
+  padding: 10px;
+  text-align: center;
+  background-color: #df265e;
+  color: white;
+}
+
+.delete_icon {
+  height: 25px;
+  width: 20px;
+}

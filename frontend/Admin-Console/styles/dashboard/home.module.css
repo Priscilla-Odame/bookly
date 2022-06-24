@@ -1,0 +1,273 @@
+.dashboard {
+  background-image: url(../../public/image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* background-color: #8f99ac; */
+  font-family: "Work Sans";
+
+}
+
+/*Navigation pane styling*/
+.navigationpane {
+  width: 4%;
+  height: max-content;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  background-color: rgb(255, 255, 255);
+  align-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  padding-top: 5px;
+  padding-bottom: 128px;
+}
+
+.homeicon {
+  width: 32px;
+  height: 32px;
+}
+
+/* #engagements{
+} */
+
+.performanceicon {
+  width: 32px;
+  height: 32px;
+}
+
+.engagementsicon {
+  width: 32px;
+  height: 32px;
+}
+
+.settingsicon {
+  width: 32px;
+  height: 32px;
+}
+
+.adminicon {
+  width: 32px;
+  height: 32px;
+}
+
+.logouticon {
+  width: 24px;
+  height: 24px;
+}
+
+.link {
+  float: top;
+  font-family: "Work Sans";
+  text-decoration: none;
+  color: #df265e;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.link a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.link a:hover {
+  background-color: #111;
+}
+
+.logout {
+  float: top;
+  font-family: "Work Sans";
+  text-decoration: none;
+  color: #df265e;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+/*Dashboard options styling*/
+
+.dashboardoptions {
+  position: absolute;
+  top: 0;
+  left: 4%;
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  align-content: center;
+  align-items: center;
+  background-color: #EFF0F7;
+  opacity: 0.7;
+
+}
+
+.homelogo {
+  /* height: 34px;
+  width: 70%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: gray;
+  padding-top: 8px;
+  border-color: white;
+  background-color: white;
+  border: white;
+  border-radius: 10px; */
+
+  height: 32px;
+  width: 75%;
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 12px;
+  margin-top: 7px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.homeheading {
+  align-content: flex-start;
+  align-items: initial;
+  width: 50%;
+  font-family: "Work Sans";
+  padding-top: 10px;
+
+}
+
+
+.homedescription {
+  width: 70%;
+  color: gray;
+  font-family: "Work Sans";
+  border-color: white;
+  background-color: white;
+  padding-top: 10px;
+  border: white;
+  border-radius: 12px;
+
+}
+
+/* .home_top_logo{
+  position: absolute;
+  position: fixed;
+  top:0;
+  left:-25%;
+
+}
+.dashboardtext{
+  position: relative;
+  left: 25%;
+  color: gray;
+
+} */
+
+.overview {
+  height: 48px;
+  width: 75%;
+  background-color: white;
+  border-style: none;
+  border-radius: 10px;
+  padding-top: 7.5px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  font-family: Work Sans;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+}
+
+.Helpdesk {
+  font-family: "Work Sans";
+  font-size: 12px;
+  padding-top: 95%;
+  align-self: center;
+}
+
+/*Dashboard content styling*/
+.dashboardcontent {
+  position: absolute;
+  top: 0;
+  left: 24%;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background: #FCFCFC;
+  overflow-x: hidden;
+  /* background: #FCFCFC; */
+  align-content: center;
+  align-items: center;
+  /* background-color:#8f99ac; */
+  /* align-content: center;
+  align-items: center; */
+}
+
+.search_acIcon {
+  position: absolute;
+  left: 363px;
+  height: 40;
+  width: 90%;
+  position: fixed;
+  z-index: 1;
+  top: 30;
+  overflow-x: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.searchbox {
+  height: 43px;
+  width: 260px;
+  background-color: #EFF0F7;
+  border-color: none;
+  border: 10px;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  padding-left: 30px;
+  text-align: left;
+}
+
+
+
+.user_icons {
+  position: absolute;
+  left: 75%;
+  top: 30px;
+  height: 42px;
+  width: 42px;
+}
+
+.home {
+  width: 100%;
+  height: 60vh;
+  margin-left: 34px;
+  font-weight: 600px;
+
+}
+
+.homeimg {
+  height: 460px;
+  width: 750px;
+}
+
+.push_mail {
+  position: absolute;
+  width: 69%;
+  font-family: "Work Sans";
+  font-weight: 600px;
+  left: 130px;
+  top: 150px;
+  border-radius: 16px;
+  font-size: 18px;
+}

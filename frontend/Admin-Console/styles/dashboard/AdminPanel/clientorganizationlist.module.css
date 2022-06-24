@@ -1,0 +1,172 @@
+  .button {
+    width: 100px;
+    height: 40px;
+    background: #df265e;
+    border: none;
+    margin: 45px;
+    border-radius: 16px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .searchbar {
+    float: right;
+    margin-right: 6%;
+  }
+
+  .search {
+    padding: 10px 10px;
+    transition: 0.3s;
+    margin-left: 25%;
+    width: 256px;
+    height: 25px;
+    float: left;
+    border: 1px solid #000;
+    border-radius: 15px;
+  }
+
+  .Table {
+    border-collapse: collapse;
+    width: 92%;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    margin-left: 9%;
+  }
+
+  .Table td,
+  .Table th {
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
+    padding-right: 60px;
+  }
+
+  .Table tr:hover {
+    background-color: #ddd;
+    cursor: pointer;
+  }
+
+  .Table th {
+    text-align: center;
+    background: #fff;
+  }
+
+  .dropdownMenu {
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white
+  }
+
+  .dropdownMenu :hover {
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white
+  }
+
+  .dropdownLink {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: none;
+    cursor: pointer;
+  }
+
+  .dropdownDel {
+    background-color: white;
+    color: black;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+
+
+  
+  .paginationContainer{
+    width: 92%;
+    height: 20%;
+    margin-top: 2%;
+    margin-left: 9%;
+    overflow: hidden;
+  }
+
+  .tableItemsCounter{
+    float: left;
+  }
+
+  .navPagination{
+    float: right;
+    margin-right: 80px;
+  }
+
+  .prevItems{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    text-decoration: none;
+    border: none;
+    cursor:pointer;
+    display: inline-block;
+    width: 80px;
+    font-size: 16px;
+    /* margin-right: 60px; */
+  }
+
+  .pageItem {
+      display: inline;
+    }
+
+  .pageLink {
+    color: black;
+    display: inline;
+    margin-left: 3%;
+    padding-left: 2%;
+    padding-right: 7%;
+    text-decoration: none;
+    border-color: #df265e;
+  }
+
+  .pageLink :hover {
+    border: 2px solid #df265e;
+    color: black;
+    font-weight: 600;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: none;
+  }
+
+  .pageLink :active {
+    border: 2px solid #df265e;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .nextItems{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    text-decoration: none;
+    border: none;
+    cursor:pointer;
+    display: inline-block;
+    width: 80px;
+    font-size: 16px;
+    margin-right:60px;
+  }

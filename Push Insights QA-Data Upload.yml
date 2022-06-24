@@ -1,0 +1,84 @@
+# Python package
+# Create and test a Python package on multiple Python versions.
+# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+
+trigger:
+  - dev
+  - qa_test_data_upload
+variables:
+
+  # Azure Resource Manager connection created during pipeline creation
+  ServiceConnectionId: 'pushInsightsDevBuildPipeline01'
+  
+  # Web app name
+  webAppName: 'pushInsightsDevFE01'
+  
+  # Environment name
+  environmentName: 'pushInsightsDevFE01'
+
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+
+  # Project root folder. Point to the folder containing package.json file.
+  projectRoot: $(System.DefaultWorkingDirectory)/frontend
+  tag: '$(Build.BuildId)'
+  dockerfilePath: '**/frontend/Data-Upload/Dockerfile'
+
+stages:
+- stage: Build
+  displayName: Build
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - task: Docker@2
+      displayName: Build
+      inputs:
+        command: build
+        Repository: 'frontend'
+        dockerfile: $(dockerfilePath)
+
+    - script: |
+        docker run -d -p 3000:3000 frontend:$(tag)
+      displayName: 'Run'
+
+    - script: |
+       cd tests
+       python3 -m pip install --upgrade pip
+       python3 -m pip install setuptools
+       python3 -m pip install -r requirements.txt
+       pytest  data_upload_feature/ -o junit_family=xunit1 -o junit_logging=all --doctest-modules --junitxml=tests/junit/test-results.xml
+      continueOnError: 'true'
+      #  python3 -m pytest test_94_uploadfiletests.py
+      displayName: 'pytest'
+
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: '**/test-*.xml'
+        testRunTitle: 'testrun'
+    
+    # - task: VSTest@2
+    #   inputs:
+    #     testSelector: 'testPlan'
+    #     testPlan: '157'
+    #     testSuite: '158'
+    #     searchFolder: '$(System.DefaultWorkingDirectory)'
+    #     uiTests: true
+      
+
+      
+    # - task: ArchiveFiles@2
+    #   displayName: 'Archive files'
+    #   inputs:
+    #     rootFolderOrFile: '$(projectRoot)'
+    #     includeRootFolder: false
+    #     archiveType: zip
+    #     archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+    #     replaceExistingArchive: true
+
+    # - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+    #   artifact: drop

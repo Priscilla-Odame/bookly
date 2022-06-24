@@ -1,0 +1,58 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/0.1.2-preview/CreateUIDefinition.MultiVm.json#",
+    "handler": "Microsoft.Azure.CreateUIDef",
+    "version": "0.1.2-preview",
+    "parameters": {
+        "resourceTypes": [
+            "microsoft.network/virtualnetworks",
+            "microsoft.network/publicipaddresses",
+            "microsoft.network/bastionhosts",
+            "microsoft.compute/virtualmachines",
+            "microsoft.network/networkinterfaces",
+            "microsoft.storage/storageaccounts",
+            "microsoft.sql/servers",
+            "microsoft.databricks/workspaces",
+            "microsoft.cognitiveservices/accounts",
+            "microsoft.eventhub/namespaces",
+            "microsoft.streamanalytics/streamingjobs",
+            "microsoft.logic/integrationaccounts",
+            "microsoft.logic/workflows",
+            "microsoft.web/connections",
+            "microsoft.documentdb/databaseaccounts",
+            "microsoft.resources/resourcegroups"
+        ],
+        "basics": [
+            {
+                "name": "PUSHINSIGHTsAdminUserName",
+                "type": "Microsoft.Common.TextBox",
+                "label": "PUSHINSIGH Ts Admin User Name",
+                "defaultValue": "pushadmin",
+                "toolTip": "Admin user name to connect to all services.",
+                "constraints": {
+                    "required": false,
+                    "regex": "",
+                    "validationMessage": ""
+                },
+                "visible": true
+            },
+            {
+                "name": "PUSHINSIGHTsAdminPassword",
+                "type": "Microsoft.Common.TextBox",
+                "label": "PUSHINSIGH Ts Admin Password",
+                "defaultValue": "P@ssw0rd123!",
+                "toolTip": "Admin password used to connect to all services.",
+                "constraints": {
+                    "required": false,
+                    "regex": "",
+                    "validationMessage": ""
+                },
+                "visible": true
+            }
+        ],
+        "steps": [],
+        "outputs": {
+            "PUSHINSIGHTsAdminUserName": "[basics('PUSHINSIGHTsAdminUserName')]",
+            "PUSHINSIGHTsAdminPassword": "[basics('PUSHINSIGHTsAdminPassword')]"
+        }
+    }
+}
